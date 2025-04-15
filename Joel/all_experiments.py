@@ -23,6 +23,32 @@ from tensorflow import keras
 from tensorflow.keras import layers
 import warnings
 
+
+# --- GPU Configuration for Optimal Utilization ---
+# Check TensorFlow and CUDA compatibility
+print("TensorFlow Version:", tf.__version__)
+print("Num GPUs Available:", len(tf.config.list_physical_devices("GPU")))
+gpus = tf.config.list_physical_devices("GPU")
+if gpus:
+    try:
+        # Set memory growth to True to avoid allocating all memory at once
+        tf.config.experimental.set_memory_growth(gpus[0], True)
+
+        # Set the visible devices to use only the first GPU (if multiple are available)
+        tf.config.set_visible_devices(gpus[0], "GPU")
+        print("Using GPU:", gpus[0])
+
+        # Enable mixed precision training for potential speedup and reduced memory usage
+        policy = tf.keras.mixed_precision.Policy("mixed_float16")
+        tf.keras.mixed_precision.set_global_policy(policy)
+        print("Using mixed precision training.")
+
+    except RuntimeError as e:
+        print(e)
+else:
+    print("No GPU detected. Training will run on CPU.")
+
+
 warnings.filterwarnings("ignore")
 np.random.seed(2)
 
