@@ -1,0 +1,761 @@
+TensorFlow Version: 2.19.0
+Num GPUs Available: 1
+Using GPU: PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+Scene 1352890837871 contains -1 edges. Removing these edges.
+Scene 13528908366160002 contains -1 edges. Removing these edges.
+Scene 13528908329: Filtering 1 nodes with NaN values.
+Scene 13528908329 contains -1 edges. Removing these edges.
+Scene 1352890810586 contains -1 edges. Removing these edges.
+Scene 1352890809912: Filtering 1 nodes with NaN values.
+Scene 1352890809912 contains -1 edges. Removing these edges.
+Scene 1352890849798: Filtering 1 nodes with NaN values.
+Scene 1352890849798 contains -1 edges. Removing these edges.
+Scene 135289081098 contains -1 edges. Removing these edges.
+Scene 1352890811843: Filtering 1 nodes with NaN values.
+Scene 1352890811843 contains -1 edges. Removing these edges.
+Scene 135289080699: Filtering 2 nodes with NaN values.
+Scene 135289080699 contains -1 edges. Removing these edges.
+Scene 1352890819948 contains -1 edges. Removing these edges.
+Scene 1352890829166: Filtering 1 nodes with NaN values.
+Scene 1352890829166 contains -1 edges. Removing these edges.
+Scene 1352890802191 contains -1 edges. Removing these edges.
+Scene 1352890803574: Filtering 1 nodes with NaN values.
+Scene 1352890803574 contains -1 edges. Removing these edges.
+Scene 1352890834297 contains -1 edges. Removing these edges.
+Scene 1352890827838 contains -1 edges. Removing these edges.
+Scene 1352890814839: Filtering 2 nodes with NaN values.
+Scene 1352890814839 contains -1 edges. Removing these edges.
+Scene 1352890906673: Filtering 1 nodes with NaN values.
+Scene 1352890906673 contains -1 edges. Removing these edges.
+Scene 1352890839303 contains -1 edges. Removing these edges.
+Scene 1352890801292: Filtering 1 nodes with NaN values.
+Scene 1352890801292 contains -1 edges. Removing these edges.
+Scene 1352890811475: Filtering 1 nodes with NaN values.
+Scene 1352890811475 contains -1 edges. Removing these edges.
+Scene 1352890832737: Filtering 1 nodes with NaN values.
+Scene 1352890832737 contains -1 edges. Removing these edges.
+Scene 1352890838146: Filtering 1 nodes with NaN values.
+Scene 1352890838146 contains -1 edges. Removing these edges.
+Scene 1352890915979 contains -1 edges. Removing these edges.
+Scene 1352890837646 contains -1 edges. Removing these edges.
+Scene 1352890832535: Filtering 1 nodes with NaN values.
+Scene 1352890832535 contains -1 edges. Removing these edges.
+Scene 1352890818385: Filtering 1 nodes with NaN values.
+Scene 1352890818385 contains -1 edges. Removing these edges.
+Scene 1352890803042: Filtering 2 nodes with NaN values.
+Scene 1352890803042 contains -1 edges. Removing these edges.
+Scene 1352890916428: Filtering 2 nodes with NaN values.
+Scene 1352890916428 contains -1 edges. Removing these edges.
+Scene 1352890813762 contains -1 edges. Removing these edges.
+Scene 1352890917968: Filtering 1 nodes with NaN values.
+Scene 1352890917968 contains -1 edges. Removing these edges.
+Scene 1352890837204 contains -1 edges. Removing these edges.
+Scene 1352890800459: Filtering 1 nodes with NaN values.
+Scene 1352890800459 contains -1 edges. Removing these edges.
+Scene 1352890918879 contains -1 edges. Removing these edges.
+Scene 1352890844758: Filtering 1 nodes with NaN values.
+Scene 1352890844758 contains -1 edges. Removing these edges.
+NOTE! Scene 1352890844758 skipped: no valid nodes after filtering.
+Scene 1352890834692 contains -1 edges. Removing these edges.
+Scene 1352890821689 contains -1 edges. Removing these edges.
+Scene 1352890824946 contains -1 edges. Removing these edges.
+Scene 1352890834536 contains -1 edges. Removing these edges.
+Scene 13528908000089998: Filtering 1 nodes with NaN values.
+Scene 13528908000089998 contains -1 edges. Removing these edges.
+Scene 1352890805653: Filtering 1 nodes with NaN values.
+Scene 1352890805653 contains -1 edges. Removing these edges.
+Scene 1352890910955: Filtering 1 nodes with NaN values.
+Scene 1352890910955 contains -1 edges. Removing these edges.
+Scene 1352890919291: Filtering 1 nodes with NaN values.
+Scene 1352890919291 contains -1 edges. Removing these edges.
+Scene 135289081753 contains -1 edges. Removing these edges.
+Scene 1352890908102: Filtering 1 nodes with NaN values.
+Scene 1352890908102 contains -1 edges. Removing these edges.
+Scene 1352890801417: Filtering 1 nodes with NaN values.
+Scene 1352890801417 contains -1 edges. Removing these edges.
+Scene 1352890870132: Filtering 1 nodes with NaN values.
+Scene 1352890870132 contains -1 edges. Removing these edges.
+Scene 13528908331360002 contains -1 edges. Removing these edges.
+Scene 13528908349910002: Filtering 1 nodes with NaN values.
+Scene 13528908349910002 contains -1 edges. Removing these edges.
+Scene 1352890833505 contains -1 edges. Removing these edges.
+Scene 1352890813256: Filtering 1 nodes with NaN values.
+Scene 1352890813256 contains -1 edges. Removing these edges.
+Scene 1352890806668: Filtering 1 nodes with NaN values.
+Scene 1352890806668 contains -1 edges. Removing these edges.
+Scene 1352890814428: Filtering 1 nodes with NaN values.
+Scene 1352890814428 contains -1 edges. Removing these edges.
+Scene 1352890824516 contains -1 edges. Removing these edges.
+Scene 1352890829505: Filtering 1 nodes with NaN values.
+Scene 1352890829505 contains -1 edges. Removing these edges.
+Scene 1352890817934: Filtering 1 nodes with NaN values.
+Scene 1352890817934 contains -1 edges. Removing these edges.
+Scene 1352890830824 contains -1 edges. Removing these edges.
+Scene 1352890812416: Filtering 1 nodes with NaN values.
+Scene 1352890812416 contains -1 edges. Removing these edges.
+Scene 1352890814706: Filtering 2 nodes with NaN values.
+Scene 1352890814706 contains -1 edges. Removing these edges.
+Scene 1352890837555 contains -1 edges. Removing these edges.
+Scene 1352890826701 contains -1 edges. Removing these edges.
+Scene 1352890919792: Filtering 1 nodes with NaN values.
+Scene 1352890919792 contains -1 edges. Removing these edges.
+Scene 1352890803659: Filtering 1 nodes with NaN values.
+Scene 1352890803659 contains -1 edges. Removing these edges.
+Scene 1352890839439 contains -1 edges. Removing these edges.
+Scene 1352890825035 contains -1 edges. Removing these edges.
+Scene 1352890833183 contains -1 edges. Removing these edges.
+Scene 1352890844712: Filtering 2 nodes with NaN values.
+Scene 1352890844712 contains -1 edges. Removing these edges.
+NOTE! Scene 1352890844712 skipped: no valid nodes after filtering.
+Scene 1352890809687: Filtering 1 nodes with NaN values.
+Scene 1352890809687 contains -1 edges. Removing these edges.
+Scene 135289080146: Filtering 1 nodes with NaN values.
+Scene 135289080146 contains -1 edges. Removing these edges.
+Scene 1352890823862: Filtering 1 nodes with NaN values.
+Scene 1352890823862 contains -1 edges. Removing these edges.
+Scene 13528908087 contains -1 edges. Removing these edges.
+Scene 1352890832459: Filtering 1 nodes with NaN values.
+Scene 1352890832459 contains -1 edges. Removing these edges.
+Scene 1352890809821: Filtering 1 nodes with NaN values.
+Scene 1352890809821 contains -1 edges. Removing these edges.
+Scene 1352890803972: Filtering 2 nodes with NaN values.
+Scene 1352890803972 contains -1 edges. Removing these edges.
+Scene 1352890817715: Filtering 1 nodes with NaN values.
+Scene 1352890817715 contains -1 edges. Removing these edges.
+Scene 1352890836794 contains -1 edges. Removing these edges.
+Scene 1352890919969: Filtering 1 nodes with NaN values.
+Scene 1352890919969 contains -1 edges. Removing these edges.
+Scene 1352890828841 contains -1 edges. Removing these edges.
+Scene 1352890843708: Filtering 2 nodes with NaN values.
+Scene 1352890843708 contains -1 edges. Removing these edges.
+Scene 1352890800907 contains -1 edges. Removing these edges.
+Scene 1352890878093 contains -1 edges. Removing these edges.
+Scene 1352890820576 contains -1 edges. Removing these edges.
+Scene 1352890894888: Filtering 4 nodes with NaN values.
+Scene 1352890894888 contains -1 edges. Removing these edges.
+Scene 1352890916071 contains -1 edges. Removing these edges.
+Scene 1352890800768: Filtering 1 nodes with NaN values.
+Scene 1352890800768 contains -1 edges. Removing these edges.
+Scene 1352890815512: Filtering 1 nodes with NaN values.
+Scene 1352890815512 contains -1 edges. Removing these edges.
+Scene 1352890829002: Filtering 1 nodes with NaN values.
+Scene 1352890829002 contains -1 edges. Removing these edges.
+Scene 135289091722: Filtering 1 nodes with NaN values.
+Scene 135289091722 contains -1 edges. Removing these edges.
+Scene 1352890813937 contains -1 edges. Removing these edges.
+Scene 135289091426 contains -1 edges. Removing these edges.
+Scene 1352890803216: Filtering 2 nodes with NaN values.
+Scene 1352890803216 contains -1 edges. Removing these edges.
+Scene 1352890815016: Filtering 1 nodes with NaN values.
+Scene 1352890815016 contains -1 edges. Removing these edges.
+Scene 13528909148 contains -1 edges. Removing these edges.
+Scene 1352890807396: Filtering 1 nodes with NaN values.
+Scene 1352890807396 contains -1 edges. Removing these edges.
+Scene 1352890814167: Filtering 1 nodes with NaN values.
+Scene 1352890814167 contains -1 edges. Removing these edges.
+Scene 1352890824206 contains -1 edges. Removing these edges.
+Scene 1352890833057: Filtering 1 nodes with NaN values.
+Scene 1352890833057 contains -1 edges. Removing these edges.
+Scene 1352890808433 contains -1 edges. Removing these edges.
+Scene 135289083891 contains -1 edges. Removing these edges.
+Scene 13528908058: Filtering 1 nodes with NaN values.
+Scene 13528908058 contains -1 edges. Removing these edges.
+Scene 1352890802323 contains -1 edges. Removing these edges.
+Scene 1352890800052: Filtering 1 nodes with NaN values.
+Scene 1352890800052 contains -1 edges. Removing these edges.
+Scene 1352890828882 contains -1 edges. Removing these edges.
+Scene 135289080254: Filtering 1 nodes with NaN values.
+Scene 135289080254 contains -1 edges. Removing these edges.
+Scene 1352890800142: Filtering 1 nodes with NaN values.
+Scene 1352890800142 contains -1 edges. Removing these edges.
+Scene 1352890807035: Filtering 1 nodes with NaN values.
+Scene 1352890807035 contains -1 edges. Removing these edges.
+Scene 1352890802778: Filtering 1 nodes with NaN values.
+Scene 1352890802778 contains -1 edges. Removing these edges.
+Scene 1352890808973 contains -1 edges. Removing these edges.
+Scene 135289091765 contains -1 edges. Removing these edges.
+Scene 1352890832698: Filtering 1 nodes with NaN values.
+Scene 1352890832698 contains -1 edges. Removing these edges.
+Scene 13528908003660002: Filtering 1 nodes with NaN values.
+Scene 13528908003660002 contains -1 edges. Removing these edges.
+Scene 1352890894309: Filtering 1 nodes with NaN values.
+Scene 1352890894309 contains -1 edges. Removing these edges.
+Scene 1352890851846: Filtering 1 nodes with NaN values.
+Scene 1352890851846 contains -1 edges. Removing these edges.
+Scene 1352890886909 contains -1 edges. Removing these edges.
+Scene 135289082308 contains -1 edges. Removing these edges.
+Scene 1352890832378: Filtering 1 nodes with NaN values.
+Scene 1352890832378 contains -1 edges. Removing these edges.
+Scene 1352890833338 contains -1 edges. Removing these edges.
+Scene 1352890801209: Filtering 1 nodes with NaN values.
+Scene 1352890801209 contains -1 edges. Removing these edges.
+Scene 1352890842712: Filtering 1 nodes with NaN values.
+Scene 1352890842712 contains -1 edges. Removing these edges.
+Scene 1352890820225 contains -1 edges. Removing these edges.
+Scene 1352890829713: Filtering 1 nodes with NaN values.
+Scene 1352890829713 contains -1 edges. Removing these edges.
+Scene 1352890825684 contains -1 edges. Removing these edges.
+Scene 1352890807487: Filtering 2 nodes with NaN values.
+Scene 1352890807487 contains -1 edges. Removing these edges.
+Scene 1352890834053 contains -1 edges. Removing these edges.
+Scene 1352890808346 contains -1 edges. Removing these edges.
+Scene 1352890844845: Filtering 2 nodes with NaN values.
+Scene 1352890844845 contains -1 edges. Removing these edges.
+NOTE! Scene 1352890844845 skipped: no valid nodes after filtering.
+Scene 1352890890812: Filtering 2 nodes with NaN values.
+Scene 1352890890812 contains -1 edges. Removing these edges.
+Scene 1352890803926: Filtering 2 nodes with NaN values.
+Scene 1352890803926 contains -1 edges. Removing these edges.
+Scene 1352890818928: Filtering 1 nodes with NaN values.
+Scene 1352890818928 contains -1 edges. Removing these edges.
+Scene 135289081789: Filtering 1 nodes with NaN values.
+Scene 135289081789 contains -1 edges. Removing these edges.
+Scene 135289080722: Filtering 1 nodes with NaN values.
+Scene 135289080722 contains -1 edges. Removing these edges.
+Scene 1352890801553: Filtering 1 nodes with NaN values.
+Scene 1352890801553 contains -1 edges. Removing these edges.
+Scene 1352890834498 contains -1 edges. Removing these edges.
+Scene 1352890806119: Filtering 1 nodes with NaN values.
+Scene 1352890806119 contains -1 edges. Removing these edges.
+Scene 1352890819103: Filtering 1 nodes with NaN values.
+Scene 1352890819103 contains -1 edges. Removing these edges.
+Scene 1352890891802 contains -1 edges. Removing these edges.
+Scene 1352890860907: Filtering 1 nodes with NaN values.
+Scene 1352890860907 contains -1 edges. Removing these edges.
+Scene 1352890834338 contains -1 edges. Removing these edges.
+Scene 1352890837115 contains -1 edges. Removing these edges.
+Scene 1352890804562: Filtering 1 nodes with NaN values.
+Scene 1352890804562 contains -1 edges. Removing these edges.
+Scene 1352890837601 contains -1 edges. Removing these edges.
+Scene 13528908292589998: Filtering 1 nodes with NaN values.
+Scene 13528908292589998 contains -1 edges. Removing these edges.
+Scene 1352890809106 contains -1 edges. Removing these edges.
+Scene 1352890895393: Filtering 1 nodes with NaN values.
+Scene 1352890895393 contains -1 edges. Removing these edges.
+Scene 1352890828668 contains -1 edges. Removing these edges.
+Scene 1352890800322: Filtering 1 nodes with NaN values.
+Scene 1352890800322 contains -1 edges. Removing these edges.
+Scene 1352890818793: Filtering 1 nodes with NaN values.
+Scene 1352890818793 contains -1 edges. Removing these edges.
+Scene 135289083596: Filtering 1 nodes with NaN values.
+Scene 135289083596 contains -1 edges. Removing these edges.
+Scene 1352890812805: Filtering 1 nodes with NaN values.
+Scene 1352890812805 contains -1 edges. Removing these edges.
+Scene 1352890805012: Filtering 1 nodes with NaN values.
+Scene 1352890805012 contains -1 edges. Removing these edges.
+Scene 135289083913 contains -1 edges. Removing these edges.
+Scene 1352890835036: Filtering 1 nodes with NaN values.
+Scene 1352890835036 contains -1 edges. Removing these edges.
+Scene 1352890841688: Filtering 1 nodes with NaN values.
+Scene 1352890841688 contains -1 edges. Removing these edges.
+Scene 1352890919525: Filtering 1 nodes with NaN values.
+Scene 1352890919525 contains -1 edges. Removing these edges.
+Scene 1352890809063 contains -1 edges. Removing these edges.
+Scene 1352890803131: Filtering 2 nodes with NaN values.
+Scene 1352890803131 contains -1 edges. Removing these edges.
+Scene 1352890841153: Filtering 1 nodes with NaN values.
+Scene 1352890841153 contains -1 edges. Removing these edges.
+Scene 1352890801118 contains -1 edges. Removing these edges.
+Scene 1352890829207: Filtering 1 nodes with NaN values.
+Scene 1352890829207 contains -1 edges. Removing these edges.
+Scene 1352890849578: Filtering 1 nodes with NaN values.
+Scene 1352890849578 contains -1 edges. Removing these edges.
+Scene 1352890832497: Filtering 1 nodes with NaN values.
+Scene 1352890832497 contains -1 edges. Removing these edges.
+Scene 1352890836572 contains -1 edges. Removing these edges.
+Scene 1352890803486: Filtering 2 nodes with NaN values.
+Scene 1352890803486 contains -1 edges. Removing these edges.
+Scene 1352890820444 contains -1 edges. Removing these edges.
+Scene 1352890845672: Filtering 1 nodes with NaN values.
+Scene 1352890845672 contains -1 edges. Removing these edges.
+NOTE! Scene 1352890845672 skipped: no valid nodes after filtering.
+Scene 1352890887794: Filtering 1 nodes with NaN values.
+Scene 1352890887794 contains -1 edges. Removing these edges.
+Scene 1352890875117 contains -1 edges. Removing these edges.
+Scene 1352890884154 contains -1 edges. Removing these edges.
+Scene 1352890819768: Filtering 1 nodes with NaN values.
+Scene 1352890819768 contains -1 edges. Removing these edges.
+Scene 1352890812682: Filtering 1 nodes with NaN values.
+Scene 1352890812682 contains -1 edges. Removing these edges.
+Scene 135289083242: Filtering 1 nodes with NaN values.
+Scene 135289083242 contains -1 edges. Removing these edges.
+Scene 1352890841295 contains -1 edges. Removing these edges.
+Scene 1352890832654: Filtering 1 nodes with NaN values.
+Scene 1352890832654 contains -1 edges. Removing these edges.
+Scene 1352890894347: Filtering 2 nodes with NaN values.
+Scene 1352890894347 contains -1 edges. Removing these edges.
+Scene 1352890835826: Filtering 1 nodes with NaN values.
+Scene 1352890835826 contains -1 edges. Removing these edges.
+Scene 1352890829843: Filtering 1 nodes with NaN values.
+Scene 1352890829843 contains -1 edges. Removing these edges.
+Scene 1352890875617 contains -1 edges. Removing these edges.
+Scene 1352890813672 contains -1 edges. Removing these edges.
+Scene 1352890806949: Filtering 1 nodes with NaN values.
+Scene 1352890806949 contains -1 edges. Removing these edges.
+Scene 1352890867565: Filtering 1 nodes with NaN values.
+Scene 1352890867565 contains -1 edges. Removing these edges.
+Scene 135289080379: Filtering 1 nodes with NaN values.
+Scene 135289080379 contains -1 edges. Removing these edges.
+Scene 1352890919111 contains -1 edges. Removing these edges.
+Scene 1352890872601: Filtering 1 nodes with NaN values.
+Scene 1352890872601 contains -1 edges. Removing these edges.
+Scene 1352890815643 contains -1 edges. Removing these edges.
+Scene 1352890831704 contains -1 edges. Removing these edges.
+Scene 1352890823766: Filtering 1 nodes with NaN values.
+Scene 1352890823766 contains -1 edges. Removing these edges.
+Scene 1352890842354: Filtering 1 nodes with NaN values.
+Scene 1352890842354 contains -1 edges. Removing these edges.
+Scene 1352890891769: Filtering 1 nodes with NaN values.
+Scene 1352890891769 contains -1 edges. Removing these edges.
+Scene 13528908282510002 contains -1 edges. Removing these edges.
+Scene 1352890834655 contains -1 edges. Removing these edges.
+Scene 1352890838234: Filtering 1 nodes with NaN values.
+Scene 1352890838234 contains -1 edges. Removing these edges.
+Scene 1352890838867: Filtering 1 nodes with NaN values.
+Scene 1352890838867 contains -1 edges. Removing these edges.
+Scene 1352890846971: Filtering 1 nodes with NaN values.
+Scene 1352890846971 contains -1 edges. Removing these edges.
+Scene 1352890804018: Filtering 1 nodes with NaN values.
+Scene 1352890804018 contains -1 edges. Removing these edges.
+Loaded 189 scenes.
+Train scenes: 132, Val scenes: 28, Test scenes: 29
+
+Running Task 1...
+
+Training...
+Epoch 1/100
+132/132 - 468s - 4s/step - mean_absolute_error: 13088.0762 - mean_euclidean_distance: 18951.8652 - mean_squared_error: 272178976.0000 - r2_score: -2.0539e+00 - rmse: 16497.8477 - loss: 41615296.0000 - val_loss: 55115240.0000 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 2307.7981 - mean_euclidean_distance: 3914.8784 - mean_squared_error: 25837704.0000 - r2_score: 0.7598 - rmse: 5083.0801 - loss: 1392092.0000 - val_loss: 2507909.7500 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1126.4117 - mean_euclidean_distance: 1962.4509 - mean_squared_error: 2939262.2500 - r2_score: 0.9709 - rmse: 1714.4276 - loss: 23610934.0000 - val_loss: 435296.0000 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 916.1044 - mean_euclidean_distance: 1538.6469 - mean_squared_error: 1601855.7500 - r2_score: 0.9844 - rmse: 1265.6444 - loss: 346051.9375 - val_loss: 336671.8125 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 1s - 11ms/step - mean_absolute_error: 1060.6328 - mean_euclidean_distance: 1645.1365 - mean_squared_error: 1957858.8750 - r2_score: 0.9811 - rmse: 1399.2351 - loss: 292205.3125 - val_loss: 188290.4219 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 752.5518 - mean_euclidean_distance: 1114.6958 - mean_squared_error: 781750.8125 - r2_score: 0.9922 - rmse: 884.1667 - loss: 450562.8125 - val_loss: 713189.6875 - learning_rate: 0.0100
+Epoch 7/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 729.5530 - mean_euclidean_distance: 1178.8257 - mean_squared_error: 904480.1875 - r2_score: 0.9900 - rmse: 951.0416 - loss: 811484.5000 - val_loss: 671356.6875 - learning_rate: 0.0100
+Epoch 8/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 631.6204 - mean_euclidean_distance: 944.1577 - mean_squared_error: 629433.8750 - r2_score: 0.9939 - rmse: 793.3687 - loss: 658037.8750 - val_loss: 657334.5000 - learning_rate: 0.0100
+Epoch 9/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 741.5246 - mean_euclidean_distance: 1076.2571 - mean_squared_error: 765790.9375 - r2_score: 0.9927 - rmse: 875.0948 - loss: 709916.1875 - val_loss: 721215.3125 - learning_rate: 0.0100
+Epoch 10/100
+
+Epoch 10: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 2s - 12ms/step - mean_absolute_error: 5454.3188 - mean_euclidean_distance: 8704.8008 - mean_squared_error: 72117408.0000 - r2_score: 0.1090 - rmse: 8492.1973 - loss: 10872618.0000 - val_loss: 12696279.0000 - learning_rate: 0.0100
+Epoch 11/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 808.5061 - mean_euclidean_distance: 1263.2045 - mean_squared_error: 1008489.6250 - r2_score: 0.9902 - rmse: 1004.2358 - loss: 746103.1250 - val_loss: 754282.4375 - learning_rate: 1.0000e-03
+Epoch 12/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 663.1256 - mean_euclidean_distance: 1062.7085 - mean_squared_error: 737607.9375 - r2_score: 0.9931 - rmse: 858.8410 - loss: 404336.9375 - val_loss: 537175.4375 - learning_rate: 1.0000e-03
+Epoch 13/100
+132/132 - 1s - 11ms/step - mean_absolute_error: 636.1720 - mean_euclidean_distance: 1043.2395 - mean_squared_error: 699492.0625 - r2_score: 0.9935 - rmse: 836.3564 - loss: 705395.2500 - val_loss: 508777.5938 - learning_rate: 1.0000e-03
+Epoch 14/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 609.8175 - mean_euclidean_distance: 993.0695 - mean_squared_error: 642123.3750 - r2_score: 0.9940 - rmse: 801.3260 - loss: 275543.4688 - val_loss: 420302.2188 - learning_rate: 1.0000e-03
+Epoch 15/100
+
+Epoch 15: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 2s - 12ms/step - mean_absolute_error: 645.0598 - mean_euclidean_distance: 993.9154 - mean_squared_error: 614400.6250 - r2_score: 0.9938 - rmse: 783.8371 - loss: 481601.7812 - val_loss: 605484.6250 - learning_rate: 1.0000e-03
+Epoch 16/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 606.6629 - mean_euclidean_distance: 940.1742 - mean_squared_error: 571965.0625 - r2_score: 0.9944 - rmse: 756.2837 - loss: 525690.8125 - val_loss: 544689.6875 - learning_rate: 1.0000e-04
+Epoch 17/100
+132/132 - 1s - 11ms/step - mean_absolute_error: 592.0423 - mean_euclidean_distance: 926.1034 - mean_squared_error: 559795.1875 - r2_score: 0.9946 - rmse: 748.1946 - loss: 410208.3125 - val_loss: 505275.3438 - learning_rate: 1.0000e-04
+Epoch 18/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 587.0389 - mean_euclidean_distance: 922.9380 - mean_squared_error: 557170.7500 - r2_score: 0.9946 - rmse: 746.4387 - loss: 174111.3906 - val_loss: 492624.9688 - learning_rate: 1.0000e-04
+Epoch 19/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 581.9184 - mean_euclidean_distance: 920.3265 - mean_squared_error: 556258.8750 - r2_score: 0.9946 - rmse: 745.8276 - loss: 338101.8125 - val_loss: 477420.3438 - learning_rate: 1.0000e-04
+Epoch 20/100
+
+Epoch 20: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 2s - 12ms/step - mean_absolute_error: 598.8864 - mean_euclidean_distance: 925.8063 - mean_squared_error: 559622.3125 - r2_score: 0.9945 - rmse: 748.0791 - loss: 98092.2109 - val_loss: 536470.4375 - learning_rate: 1.0000e-04
+Epoch 20: early stopping
+Restoring model weights from the end of the best epoch: 5.
+Evaluating on test dataset...
+29/29 - 17s - 570ms/step - mean_absolute_error: 1005.8085 - mean_euclidean_distance: 1565.5260 - mean_squared_error: 1781295.6250 - r2_score: 0.9790 - rmse: 1334.6519 - loss: 1929697.1250
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=1929697.125>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=1005.8085327148438>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=1781295.625>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=1334.65185546875>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.9789887070655823>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=1565.5260009765625>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=26225.8, future_y=-16056.4
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=24748.2, future_y=-15086.0
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=19148.9, future_y=-12248.0
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=21870.5, future_y=-13930.6
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=19548.2, future_y=-11994.7
+
+Running Task 2...
+
+
+Run: 1
+Heads: 2
+
+Training...
+Epoch 1/100
+132/132 - 257s - 2s/step - mean_absolute_error: 4872.2510 - mean_euclidean_distance: 8111.1147 - mean_squared_error: 46141156.0000 - r2_score: 0.7141 - rmse: 6792.7280 - loss: 3265254.7500 - val_loss: 13638901.0000 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 1s - 11ms/step - mean_absolute_error: 1529.8900 - mean_euclidean_distance: 2640.1304 - mean_squared_error: 7300806.0000 - r2_score: 0.9315 - rmse: 2702.0002 - loss: 1114389.0000 - val_loss: 290778.5312 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 2716.6121 - mean_euclidean_distance: 4441.6953 - mean_squared_error: 14218479.0000 - r2_score: 0.8848 - rmse: 3770.7397 - loss: 4703668.0000 - val_loss: 1899401.8750 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1731.4003 - mean_euclidean_distance: 2931.9221 - mean_squared_error: 7399482.0000 - r2_score: 0.9419 - rmse: 2720.1987 - loss: 2832375.5000 - val_loss: 1927650.8750 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 2276.0503 - mean_euclidean_distance: 3629.7522 - mean_squared_error: 8912635.0000 - r2_score: 0.9172 - rmse: 2985.4038 - loss: 5902351.0000 - val_loss: 3817354.0000 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 18884.3926 - mean_euclidean_distance: 27868.4629 - mean_squared_error: 478311488.0000 - r2_score: -2.6970e+00 - rmse: 21870.3340 - loss: 535488160.0000 - val_loss: 190884288.0000 - learning_rate: 0.0100
+Epoch 7/100
+
+Epoch 7: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 1s - 8ms/step - mean_absolute_error: 2472.9180 - mean_euclidean_distance: 4327.2100 - mean_squared_error: 13884359.0000 - r2_score: 0.8796 - rmse: 3726.1721 - loss: 13229490.0000 - val_loss: 2336301.5000 - learning_rate: 0.0100
+Epoch 8/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1664.0352 - mean_euclidean_distance: 2875.9998 - mean_squared_error: 9342967.0000 - r2_score: 0.9047 - rmse: 3056.6267 - loss: 3712924.5000 - val_loss: 1684768.3750 - learning_rate: 1.0000e-03
+Epoch 9/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1659.6351 - mean_euclidean_distance: 2849.8054 - mean_squared_error: 9287507.0000 - r2_score: 0.9055 - rmse: 3047.5413 - loss: 3719437.2500 - val_loss: 1633493.3750 - learning_rate: 1.0000e-03
+Epoch 10/100
+132/132 - 1s - 9ms/step - mean_absolute_error: 1629.7637 - mean_euclidean_distance: 2812.8071 - mean_squared_error: 9277599.0000 - r2_score: 0.9055 - rmse: 3045.9153 - loss: 6729425.0000 - val_loss: 1373631.1250 - learning_rate: 1.0000e-03
+Epoch 11/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1608.6200 - mean_euclidean_distance: 2815.0374 - mean_squared_error: 9215235.0000 - r2_score: 0.9065 - rmse: 3035.6604 - loss: 118868496.0000 - val_loss: 1471833.3750 - learning_rate: 1.0000e-03
+Epoch 12/100
+
+Epoch 12: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 1s - 10ms/step - mean_absolute_error: 1639.4540 - mean_euclidean_distance: 2791.1938 - mean_squared_error: 9151412.0000 - r2_score: 0.9072 - rmse: 3025.1301 - loss: 1611760.6250 - val_loss: 1564771.2500 - learning_rate: 1.0000e-03
+Epoch 13/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1620.2092 - mean_euclidean_distance: 2801.9111 - mean_squared_error: 9148832.0000 - r2_score: 0.9071 - rmse: 3024.7036 - loss: 2745111.2500 - val_loss: 1618331.6250 - learning_rate: 1.0000e-04
+Epoch 14/100
+132/132 - 1s - 8ms/step - mean_absolute_error: 1626.9482 - mean_euclidean_distance: 2803.2041 - mean_squared_error: 9141100.0000 - r2_score: 0.9072 - rmse: 3023.4253 - loss: 1083466.6250 - val_loss: 1651896.6250 - learning_rate: 1.0000e-04
+Epoch 15/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1612.1741 - mean_euclidean_distance: 2785.6304 - mean_squared_error: 9117597.0000 - r2_score: 0.9075 - rmse: 3019.5359 - loss: 1670867.5000 - val_loss: 1578703.2500 - learning_rate: 1.0000e-04
+Epoch 16/100
+132/132 - 1s - 10ms/step - mean_absolute_error: 1615.1024 - mean_euclidean_distance: 2791.3669 - mean_squared_error: 9120683.0000 - r2_score: 0.9075 - rmse: 3020.0469 - loss: 1826965.2500 - val_loss: 1618799.1250 - learning_rate: 1.0000e-04
+Epoch 17/100
+
+Epoch 17: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 1s - 10ms/step - mean_absolute_error: 1631.7960 - mean_euclidean_distance: 2802.9368 - mean_squared_error: 9122385.0000 - r2_score: 0.9074 - rmse: 3020.3286 - loss: 1968157.3750 - val_loss: 1699283.2500 - learning_rate: 1.0000e-04
+Epoch 17: early stopping
+Restoring model weights from the end of the best epoch: 2.
+Evaluating on test dataset...
+29/29 - 13s - 434ms/step - mean_absolute_error: 1443.6019 - mean_euclidean_distance: 2503.5657 - mean_squared_error: 6828620.0000 - r2_score: 0.9351 - rmse: 2613.1628 - loss: 89210416.0000
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=89210416.0>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=1443.6019287109375>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=6828620.0>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=2613.162841796875>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.9350847005844116>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=2503.565673828125>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=26002.3, future_y=-16217.8
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=26143.2, future_y=-15173.5
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=18880.0, future_y=-12742.7
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=22849.2, future_y=-13470.4
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=19487.2, future_y=-11971.4
+
+Run: 2
+Heads: 4
+
+Training...
+Epoch 1/100
+132/132 - 435s - 3s/step - mean_absolute_error: 6826.3481 - mean_euclidean_distance: 11208.8252 - mean_squared_error: 76552856.0000 - r2_score: 0.3809 - rmse: 8749.4482 - loss: 249076832.0000 - val_loss: 25910254.0000 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 4171.5259 - mean_euclidean_distance: 6372.7476 - mean_squared_error: 25632540.0000 - r2_score: 0.7548 - rmse: 5062.8589 - loss: 24271158.0000 - val_loss: 10191037.0000 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 1710.0649 - mean_euclidean_distance: 3096.0481 - mean_squared_error: 10178086.0000 - r2_score: 0.8935 - rmse: 3190.3113 - loss: 1562580.3750 - val_loss: 985814.5000 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1784.6901 - mean_euclidean_distance: 2938.9802 - mean_squared_error: 9778889.0000 - r2_score: 0.9000 - rmse: 3127.1216 - loss: 1490603.1250 - val_loss: 1608072.3750 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1692.9435 - mean_euclidean_distance: 3029.8606 - mean_squared_error: 9732036.0000 - r2_score: 0.9018 - rmse: 3119.6211 - loss: 1827656.2500 - val_loss: 1208377.3750 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1833.4805 - mean_euclidean_distance: 3062.5298 - mean_squared_error: 9806428.0000 - r2_score: 0.9010 - rmse: 3131.5217 - loss: 7544249.5000 - val_loss: 2115560.0000 - learning_rate: 0.0100
+Epoch 7/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 2166.8120 - mean_euclidean_distance: 3680.2605 - mean_squared_error: 11166056.0000 - r2_score: 0.8812 - rmse: 3341.5649 - loss: 643041.8125 - val_loss: 3059356.5000 - learning_rate: 0.0100
+Epoch 8/100
+
+Epoch 8: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 2s - 14ms/step - mean_absolute_error: 2460.9861 - mean_euclidean_distance: 4253.4863 - mean_squared_error: 13861580.0000 - r2_score: 0.8723 - rmse: 3723.1143 - loss: 4474031.5000 - val_loss: 1654401.3750 - learning_rate: 0.0100
+Epoch 9/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1599.3560 - mean_euclidean_distance: 2776.5791 - mean_squared_error: 9159019.0000 - r2_score: 0.9058 - rmse: 3026.3872 - loss: 753594.5625 - val_loss: 1411949.7500 - learning_rate: 1.0000e-03
+Epoch 10/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1592.9921 - mean_euclidean_distance: 2781.5791 - mean_squared_error: 9180029.0000 - r2_score: 0.9055 - rmse: 3029.8562 - loss: 3243854.0000 - val_loss: 1397661.5000 - learning_rate: 1.0000e-03
+Epoch 11/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1580.7980 - mean_euclidean_distance: 2759.1091 - mean_squared_error: 9139394.0000 - r2_score: 0.9059 - rmse: 3023.1431 - loss: 4215440.0000 - val_loss: 1352221.0000 - learning_rate: 1.0000e-03
+Epoch 12/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 1590.4833 - mean_euclidean_distance: 2781.7642 - mean_squared_error: 9184711.0000 - r2_score: 0.9055 - rmse: 3030.6287 - loss: 5328086.0000 - val_loss: 1402601.2500 - learning_rate: 1.0000e-03
+Epoch 13/100
+
+Epoch 13: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 2s - 13ms/step - mean_absolute_error: 1559.3423 - mean_euclidean_distance: 2715.3958 - mean_squared_error: 9078276.0000 - r2_score: 0.9067 - rmse: 3013.0178 - loss: 663069.0625 - val_loss: 1258383.2500 - learning_rate: 1.0000e-03
+Epoch 14/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1570.5787 - mean_euclidean_distance: 2732.3040 - mean_squared_error: 9091623.0000 - r2_score: 0.9065 - rmse: 3015.2317 - loss: 637697.2500 - val_loss: 1307719.8750 - learning_rate: 1.0000e-04
+Epoch 15/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1571.6292 - mean_euclidean_distance: 2742.5193 - mean_squared_error: 9107946.0000 - r2_score: 0.9063 - rmse: 3017.9373 - loss: 1643134.8750 - val_loss: 1315249.6250 - learning_rate: 1.0000e-04
+Epoch 16/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1560.2343 - mean_euclidean_distance: 2722.5845 - mean_squared_error: 9083566.0000 - r2_score: 0.9066 - rmse: 3013.8955 - loss: 1529712.7500 - val_loss: 1266484.8750 - learning_rate: 1.0000e-04
+Epoch 17/100
+132/132 - 2s - 13ms/step - mean_absolute_error: 1568.1858 - mean_euclidean_distance: 2732.9636 - mean_squared_error: 9092692.0000 - r2_score: 0.9064 - rmse: 3015.4092 - loss: 930063.9375 - val_loss: 1301283.6250 - learning_rate: 1.0000e-04
+Epoch 18/100
+
+Epoch 18: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 2s - 14ms/step - mean_absolute_error: 1557.6748 - mean_euclidean_distance: 2718.5212 - mean_squared_error: 9079786.0000 - r2_score: 0.9066 - rmse: 3013.2683 - loss: 1554096.8750 - val_loss: 1248607.0000 - learning_rate: 1.0000e-04
+Epoch 18: early stopping
+Restoring model weights from the end of the best epoch: 3.
+Evaluating on test dataset...
+29/29 - 21s - 727ms/step - mean_absolute_error: 1499.5332 - mean_euclidean_distance: 2770.6460 - mean_squared_error: 9094836.0000 - r2_score: 0.9031 - rmse: 3015.7646 - loss: 120439104.0000
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=120439104.0>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=1499.533203125>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=9094836.0>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=3015.7646484375>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.9031079411506653>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=2770.64599609375>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=25778.2, future_y=-12839.4
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=25307.5, future_y=-14166.8
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=18199.1, future_y=-9972.5
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=21973.6, future_y=-12022.9
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=18819.3, future_y=-9710.8
+
+Run: 3
+Heads: 6
+
+Training...
+Epoch 1/100
+132/132 - 729s - 6s/step - mean_absolute_error: 25166.3672 - mean_euclidean_distance: 38647.0195 - mean_squared_error: 1232508928.0000 - r2_score: -9.3871e+00 - rmse: 35107.1055 - loss: 2144540416.0000 - val_loss: 200205456.0000 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 3s - 20ms/step - mean_absolute_error: 1919.0309 - mean_euclidean_distance: 3302.8135 - mean_squared_error: 11830286.0000 - r2_score: 0.8851 - rmse: 3439.5183 - loss: 804882.8750 - val_loss: 1947498.3750 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 2148.2710 - mean_euclidean_distance: 3531.0178 - mean_squared_error: 10587956.0000 - r2_score: 0.9041 - rmse: 3253.9141 - loss: 3434595.2500 - val_loss: 2424854.2500 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1796.6575 - mean_euclidean_distance: 3149.8767 - mean_squared_error: 9206689.0000 - r2_score: 0.9154 - rmse: 3034.2524 - loss: 6425546.0000 - val_loss: 1250217.3750 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1632.8234 - mean_euclidean_distance: 2722.1948 - mean_squared_error: 7992124.0000 - r2_score: 0.9224 - rmse: 2827.0344 - loss: 1606611.6250 - val_loss: 1358667.3750 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1664.6829 - mean_euclidean_distance: 2862.9094 - mean_squared_error: 8174974.5000 - r2_score: 0.9223 - rmse: 2859.1912 - loss: 2518701.2500 - val_loss: 1628007.1250 - learning_rate: 0.0100
+Epoch 7/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1579.2141 - mean_euclidean_distance: 2771.3589 - mean_squared_error: 8153150.0000 - r2_score: 0.9246 - rmse: 2855.3721 - loss: 3936588.7500 - val_loss: 1501746.2500 - learning_rate: 0.0100
+Epoch 8/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 3083.0603 - mean_euclidean_distance: 5053.9399 - mean_squared_error: 18783444.0000 - r2_score: 0.8626 - rmse: 4333.9868 - loss: 2704606.0000 - val_loss: 4130334.0000 - learning_rate: 0.0100
+Epoch 9/100
+
+Epoch 9: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 2s - 16ms/step - mean_absolute_error: 1640.4460 - mean_euclidean_distance: 2746.5659 - mean_squared_error: 7570639.0000 - r2_score: 0.9257 - rmse: 2751.4792 - loss: 1614498.8750 - val_loss: 1461421.1250 - learning_rate: 0.0100
+Epoch 10/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1614.5786 - mean_euclidean_distance: 2726.2727 - mean_squared_error: 7381368.0000 - r2_score: 0.9263 - rmse: 2716.8672 - loss: 5932687.5000 - val_loss: 1538254.0000 - learning_rate: 1.0000e-03
+Epoch 11/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1583.6526 - mean_euclidean_distance: 2678.2383 - mean_squared_error: 7288727.5000 - r2_score: 0.9274 - rmse: 2699.7644 - loss: 1831986.1250 - val_loss: 1441895.8750 - learning_rate: 1.0000e-03
+Epoch 12/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1563.6415 - mean_euclidean_distance: 2642.7930 - mean_squared_error: 7204345.5000 - r2_score: 0.9284 - rmse: 2684.0913 - loss: 42418708.0000 - val_loss: 1383606.3750 - learning_rate: 1.0000e-03
+Epoch 13/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1513.0380 - mean_euclidean_distance: 2613.1208 - mean_squared_error: 7157182.5000 - r2_score: 0.9292 - rmse: 2675.2910 - loss: 5661352.0000 - val_loss: 1256590.6250 - learning_rate: 1.0000e-03
+Epoch 14/100
+132/132 - 3s - 20ms/step - mean_absolute_error: 1498.4791 - mean_euclidean_distance: 2569.4685 - mean_squared_error: 7024311.5000 - r2_score: 0.9302 - rmse: 2650.3418 - loss: 1597633.2500 - val_loss: 1237536.3750 - learning_rate: 1.0000e-03
+Epoch 15/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1500.7528 - mean_euclidean_distance: 2581.8411 - mean_squared_error: 6976455.5000 - r2_score: 0.9305 - rmse: 2641.2981 - loss: 753077.6250 - val_loss: 1368526.1250 - learning_rate: 1.0000e-03
+Epoch 16/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1539.9884 - mean_euclidean_distance: 2614.7766 - mean_squared_error: 6975367.0000 - r2_score: 0.9304 - rmse: 2641.0920 - loss: 4834687.5000 - val_loss: 1469387.8750 - learning_rate: 1.0000e-03
+Epoch 17/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1562.0099 - mean_euclidean_distance: 2681.5356 - mean_squared_error: 7144941.0000 - r2_score: 0.9288 - rmse: 2673.0022 - loss: 2953298.0000 - val_loss: 1500406.3750 - learning_rate: 1.0000e-03
+Epoch 18/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1494.6343 - mean_euclidean_distance: 2559.5967 - mean_squared_error: 6864555.0000 - r2_score: 0.9314 - rmse: 2620.0295 - loss: 4099109.7500 - val_loss: 1343300.1250 - learning_rate: 1.0000e-03
+Epoch 19/100
+
+Epoch 19: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 3s - 20ms/step - mean_absolute_error: 1513.4604 - mean_euclidean_distance: 2591.3081 - mean_squared_error: 6902636.5000 - r2_score: 0.9307 - rmse: 2627.2869 - loss: 1765318.5000 - val_loss: 1402166.3750 - learning_rate: 1.0000e-03
+Epoch 20/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1476.0583 - mean_euclidean_distance: 2538.7231 - mean_squared_error: 6808139.0000 - r2_score: 0.9319 - rmse: 2609.2412 - loss: 6361062.0000 - val_loss: 1293322.0000 - learning_rate: 1.0000e-04
+Epoch 21/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1466.7689 - mean_euclidean_distance: 2529.8760 - mean_squared_error: 6787083.0000 - r2_score: 0.9321 - rmse: 2605.2031 - loss: 1079141.8750 - val_loss: 1272134.3750 - learning_rate: 1.0000e-04
+Epoch 22/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1458.9617 - mean_euclidean_distance: 2517.2195 - mean_squared_error: 6754643.5000 - r2_score: 0.9324 - rmse: 2598.9697 - loss: 702662.0000 - val_loss: 1264480.5000 - learning_rate: 1.0000e-04
+Epoch 23/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1456.6364 - mean_euclidean_distance: 2514.0225 - mean_squared_error: 6745609.5000 - r2_score: 0.9325 - rmse: 2597.2312 - loss: 791085.5000 - val_loss: 1261969.5000 - learning_rate: 1.0000e-04
+Epoch 24/100
+
+Epoch 24: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 2s - 16ms/step - mean_absolute_error: 1466.7627 - mean_euclidean_distance: 2518.7864 - mean_squared_error: 6735234.0000 - r2_score: 0.9326 - rmse: 2595.2329 - loss: 4589596.5000 - val_loss: 1300345.8750 - learning_rate: 1.0000e-04
+Epoch 25/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1462.9348 - mean_euclidean_distance: 2517.4102 - mean_squared_error: 6736411.5000 - r2_score: 0.9326 - rmse: 2595.4597 - loss: 848512.5000 - val_loss: 1285802.8750 - learning_rate: 1.0000e-05
+Epoch 26/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 1460.6014 - mean_euclidean_distance: 2516.5410 - mean_squared_error: 6738295.5000 - r2_score: 0.9326 - rmse: 2595.8228 - loss: 2331828.7500 - val_loss: 1277694.6250 - learning_rate: 1.0000e-05
+Epoch 27/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1461.8683 - mean_euclidean_distance: 2519.3123 - mean_squared_error: 6743074.0000 - r2_score: 0.9325 - rmse: 2596.7429 - loss: 1163590.7500 - val_loss: 1283555.0000 - learning_rate: 1.0000e-05
+Epoch 28/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1459.2262 - mean_euclidean_distance: 2515.6580 - mean_squared_error: 6736395.0000 - r2_score: 0.9326 - rmse: 2595.4565 - loss: 1154065.8750 - val_loss: 1277497.3750 - learning_rate: 1.0000e-05
+Epoch 29/100
+
+Epoch 29: ReduceLROnPlateau reducing learning rate to 1e-06.
+132/132 - 2s - 16ms/step - mean_absolute_error: 1457.9021 - mean_euclidean_distance: 2516.5710 - mean_squared_error: 6738054.5000 - r2_score: 0.9326 - rmse: 2595.7764 - loss: 3047643.5000 - val_loss: 1274205.3750 - learning_rate: 1.0000e-05
+Epoch 29: early stopping
+Restoring model weights from the end of the best epoch: 14.
+Evaluating on test dataset...
+29/29 - 30s - 1s/step - mean_absolute_error: 1271.5443 - mean_euclidean_distance: 2201.3889 - mean_squared_error: 6015604.5000 - r2_score: 0.9398 - rmse: 2452.6729 - loss: 69760160.0000
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=69760160.0>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=1271.5443115234375>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=6015604.5>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=2452.6728515625>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.9397962093353271>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=2201.388916015625>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=25529.9, future_y=-14485.6
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=24420.0, future_y=-13862.9
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=19182.0, future_y=-11547.7
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=21443.8, future_y=-12246.0
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=18715.9, future_y=-11158.0
+
+Run: 4
+Heads: 8
+
+Training...
+Epoch 1/100
+132/132 - 882s - 7s/step - mean_absolute_error: 20834.6875 - mean_euclidean_distance: 38468.8438 - mean_squared_error: 7363540480.0000 - r2_score: -6.8476e+01 - rmse: 85811.0781 - loss: 86286568.0000 - val_loss: 68027096.0000 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 3s - 23ms/step - mean_absolute_error: 10539.4922 - mean_euclidean_distance: 16594.8086 - mean_squared_error: 184062672.0000 - r2_score: -4.6340e-01 - rmse: 13566.9697 - loss: 217043248.0000 - val_loss: 96741456.0000 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 5s - 35ms/step - mean_absolute_error: 4634.7168 - mean_euclidean_distance: 7648.3252 - mean_squared_error: 48260388.0000 - r2_score: 0.6069 - rmse: 6946.9697 - loss: 22459844.0000 - val_loss: 21632500.0000 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 2442.5571 - mean_euclidean_distance: 4290.6260 - mean_squared_error: 20151698.0000 - r2_score: 0.8206 - rmse: 4489.0645 - loss: 15865627.0000 - val_loss: 5292999.5000 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 3s - 20ms/step - mean_absolute_error: 2128.3142 - mean_euclidean_distance: 3681.1958 - mean_squared_error: 15211885.0000 - r2_score: 0.8606 - rmse: 3900.2417 - loss: 2168005.5000 - val_loss: 3364886.5000 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 3s - 22ms/step - mean_absolute_error: 1824.1710 - mean_euclidean_distance: 3200.8811 - mean_squared_error: 12147763.0000 - r2_score: 0.8856 - rmse: 3485.3640 - loss: 8852664.0000 - val_loss: 2272068.5000 - learning_rate: 0.0100
+Epoch 7/100
+132/132 - 5s - 38ms/step - mean_absolute_error: 1662.1974 - mean_euclidean_distance: 2931.7690 - mean_squared_error: 9444294.0000 - r2_score: 0.9079 - rmse: 3073.1570 - loss: 1624603.0000 - val_loss: 2041459.2500 - learning_rate: 0.0100
+Epoch 8/100
+132/132 - 3s - 19ms/step - mean_absolute_error: 1826.9048 - mean_euclidean_distance: 3115.3560 - mean_squared_error: 8181715.5000 - r2_score: 0.9164 - rmse: 2860.3699 - loss: 5223926.5000 - val_loss: 2881305.7500 - learning_rate: 0.0100
+Epoch 9/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1503.2733 - mean_euclidean_distance: 2601.8152 - mean_squared_error: 6447622.0000 - r2_score: 0.9314 - rmse: 2539.2168 - loss: 1320784.8750 - val_loss: 1527196.2500 - learning_rate: 0.0100
+Epoch 10/100
+132/132 - 3s - 19ms/step - mean_absolute_error: 1607.5370 - mean_euclidean_distance: 2695.7356 - mean_squared_error: 6194126.0000 - r2_score: 0.9325 - rmse: 2488.8000 - loss: 32400334.0000 - val_loss: 1548482.6250 - learning_rate: 0.0100
+Epoch 11/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1470.4429 - mean_euclidean_distance: 2483.2046 - mean_squared_error: 5217314.0000 - r2_score: 0.9409 - rmse: 2284.1440 - loss: 76199952.0000 - val_loss: 1580496.8750 - learning_rate: 0.0100
+Epoch 12/100
+132/132 - 1s - 11ms/step - mean_absolute_error: 1541.6366 - mean_euclidean_distance: 2545.9622 - mean_squared_error: 4907023.0000 - r2_score: 0.9441 - rmse: 2215.1802 - loss: 1798071.8750 - val_loss: 1617544.6250 - learning_rate: 0.0100
+Epoch 13/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1444.4379 - mean_euclidean_distance: 2394.3181 - mean_squared_error: 4579849.5000 - r2_score: 0.9455 - rmse: 2140.0583 - loss: 822063.9375 - val_loss: 1759565.8750 - learning_rate: 0.0100
+Epoch 14/100
+
+Epoch 14: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 2s - 15ms/step - mean_absolute_error: 1493.2902 - mean_euclidean_distance: 2440.4695 - mean_squared_error: 4351976.5000 - r2_score: 0.9477 - rmse: 2086.1392 - loss: 7148752.5000 - val_loss: 2085489.8750 - learning_rate: 0.0100
+Epoch 15/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 1406.0760 - mean_euclidean_distance: 2341.7134 - mean_squared_error: 4287504.5000 - r2_score: 0.9481 - rmse: 2070.6289 - loss: 1654876.8750 - val_loss: 1584218.8750 - learning_rate: 1.0000e-03
+Epoch 16/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1432.3585 - mean_euclidean_distance: 2372.3000 - mean_squared_error: 4256062.0000 - r2_score: 0.9485 - rmse: 2063.0225 - loss: 764184.9375 - val_loss: 1755748.8750 - learning_rate: 1.0000e-03
+Epoch 17/100
+132/132 - 2s - 12ms/step - mean_absolute_error: 1442.1586 - mean_euclidean_distance: 2380.2456 - mean_squared_error: 4258468.5000 - r2_score: 0.9484 - rmse: 2063.6057 - loss: 1213258.6250 - val_loss: 1768113.0000 - learning_rate: 1.0000e-03
+Epoch 18/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1431.2872 - mean_euclidean_distance: 2352.0090 - mean_squared_error: 4226215.5000 - r2_score: 0.9489 - rmse: 2055.7761 - loss: 1022301.9375 - val_loss: 1685472.6250 - learning_rate: 1.0000e-03
+Epoch 19/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1414.8270 - mean_euclidean_distance: 2335.9966 - mean_squared_error: 4308006.0000 - r2_score: 0.9477 - rmse: 2075.5737 - loss: 7345363.0000 - val_loss: 1508171.6250 - learning_rate: 1.0000e-03
+Epoch 20/100
+132/132 - 3s - 19ms/step - mean_absolute_error: 1436.4722 - mean_euclidean_distance: 2365.4761 - mean_squared_error: 4230219.0000 - r2_score: 0.9488 - rmse: 2056.7495 - loss: 1110395.8750 - val_loss: 1694662.2500 - learning_rate: 1.0000e-03
+Epoch 21/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1455.5387 - mean_euclidean_distance: 2386.1477 - mean_squared_error: 4235027.5000 - r2_score: 0.9489 - rmse: 2057.9182 - loss: 984332.5000 - val_loss: 1772927.0000 - learning_rate: 1.0000e-03
+Epoch 22/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1402.6190 - mean_euclidean_distance: 2367.8301 - mean_squared_error: 4364649.5000 - r2_score: 0.9470 - rmse: 2089.1743 - loss: 10310362.0000 - val_loss: 1369682.7500 - learning_rate: 1.0000e-03
+Epoch 23/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1486.6211 - mean_euclidean_distance: 2454.3159 - mean_squared_error: 4325705.5000 - r2_score: 0.9473 - rmse: 2079.8330 - loss: 3999720.5000 - val_loss: 1881069.6250 - learning_rate: 1.0000e-03
+Epoch 24/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1490.6752 - mean_euclidean_distance: 2416.2207 - mean_squared_error: 4218955.5000 - r2_score: 0.9491 - rmse: 2054.0095 - loss: 55569780.0000 - val_loss: 1789731.3750 - learning_rate: 1.0000e-03
+Epoch 25/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1404.3574 - mean_euclidean_distance: 2347.4836 - mean_squared_error: 4216405.5000 - r2_score: 0.9489 - rmse: 2053.3887 - loss: 19976758.0000 - val_loss: 1503992.0000 - learning_rate: 1.0000e-03
+Epoch 26/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1420.9121 - mean_euclidean_distance: 2360.4011 - mean_squared_error: 4135455.5000 - r2_score: 0.9498 - rmse: 2033.5819 - loss: 1070528.0000 - val_loss: 1698061.6250 - learning_rate: 1.0000e-03
+Epoch 27/100
+
+Epoch 27: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 2s - 18ms/step - mean_absolute_error: 1466.5704 - mean_euclidean_distance: 2397.5259 - mean_squared_error: 4171142.0000 - r2_score: 0.9494 - rmse: 2042.3374 - loss: 6454636.0000 - val_loss: 1718144.8750 - learning_rate: 1.0000e-03
+Epoch 28/100
+132/132 - 3s - 19ms/step - mean_absolute_error: 1439.3124 - mean_euclidean_distance: 2372.4001 - mean_squared_error: 4144369.0000 - r2_score: 0.9497 - rmse: 2035.7723 - loss: 2356933.2500 - val_loss: 1670373.8750 - learning_rate: 1.0000e-04
+Epoch 29/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 1424.9696 - mean_euclidean_distance: 2356.1733 - mean_squared_error: 4127285.5000 - r2_score: 0.9499 - rmse: 2031.5721 - loss: 3813326.0000 - val_loss: 1631641.1250 - learning_rate: 1.0000e-04
+Epoch 30/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1419.8586 - mean_euclidean_distance: 2350.3223 - mean_squared_error: 4125823.7500 - r2_score: 0.9499 - rmse: 2031.2124 - loss: 1173648.3750 - val_loss: 1609457.5000 - learning_rate: 1.0000e-04
+Epoch 31/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1423.1538 - mean_euclidean_distance: 2354.0664 - mean_squared_error: 4131655.5000 - r2_score: 0.9498 - rmse: 2032.6473 - loss: 2261367.7500 - val_loss: 1625738.0000 - learning_rate: 1.0000e-04
+Epoch 32/100
+
+Epoch 32: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 3s - 21ms/step - mean_absolute_error: 1409.0493 - mean_euclidean_distance: 2340.5320 - mean_squared_error: 4128135.2500 - r2_score: 0.9499 - rmse: 2031.7812 - loss: 1169387.8750 - val_loss: 1557304.6250 - learning_rate: 1.0000e-04
+Epoch 33/100
+132/132 - 2s - 19ms/step - mean_absolute_error: 1415.9520 - mean_euclidean_distance: 2344.1580 - mean_squared_error: 4122260.2500 - r2_score: 0.9500 - rmse: 2030.3350 - loss: 2231833.2500 - val_loss: 1593597.8750 - learning_rate: 1.0000e-05
+Epoch 34/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1419.8348 - mean_euclidean_distance: 2348.1348 - mean_squared_error: 4123832.0000 - r2_score: 0.9499 - rmse: 2030.7220 - loss: 1101296.3750 - val_loss: 1609625.0000 - learning_rate: 1.0000e-05
+Epoch 35/100
+132/132 - 3s - 21ms/step - mean_absolute_error: 1424.2679 - mean_euclidean_distance: 2352.1492 - mean_squared_error: 4127352.5000 - r2_score: 0.9499 - rmse: 2031.5886 - loss: 1112895.1250 - val_loss: 1621329.2500 - learning_rate: 1.0000e-05
+Epoch 36/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1424.5604 - mean_euclidean_distance: 2353.6777 - mean_squared_error: 4128214.2500 - r2_score: 0.9499 - rmse: 2031.8008 - loss: 3421773.2500 - val_loss: 1624198.2500 - learning_rate: 1.0000e-05
+Epoch 37/100
+
+Epoch 37: ReduceLROnPlateau reducing learning rate to 1e-06.
+132/132 - 2s - 16ms/step - mean_absolute_error: 1425.2903 - mean_euclidean_distance: 2354.7219 - mean_squared_error: 4128163.5000 - r2_score: 0.9499 - rmse: 2031.7882 - loss: 5479404.0000 - val_loss: 1628474.8750 - learning_rate: 1.0000e-05
+Epoch 37: early stopping
+Restoring model weights from the end of the best epoch: 22.
+Evaluating on test dataset...
+29/29 - 29s - 1s/step - mean_absolute_error: 1236.9597 - mean_euclidean_distance: 2078.0532 - mean_squared_error: 3747880.0000 - r2_score: 0.9462 - rmse: 1935.9442 - loss: 9608248.0000
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=9608248.0>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=1236.959716796875>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=3747880.0>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=1935.9442138671875>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.9461688995361328>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=2078.05322265625>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=25690.9, future_y=-13786.7
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=24748.9, future_y=-13814.2
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=18376.5, future_y=-9643.9
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=21413.6, future_y=-11882.8
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=19455.9, future_y=-10128.2
+
+Running Task 3...
+
+Training...
+Epoch 1/100
+132/132 - 1190s - 9s/step - mean_absolute_error: 3541.0959 - mean_euclidean_distance: 5244.7144 - mean_squared_error: 24447202.0000 - r2_score: 0.7909 - rmse: 4944.4111 - loss: 29319274.0000 - val_loss: 3023420.2500 - learning_rate: 0.0100
+Epoch 2/100
+132/132 - 3s - 22ms/step - mean_absolute_error: 1379.9679 - mean_euclidean_distance: 2373.2236 - mean_squared_error: 6468529.0000 - r2_score: 0.9415 - rmse: 2543.3303 - loss: 4700934.5000 - val_loss: 833908.6875 - learning_rate: 0.0100
+Epoch 3/100
+132/132 - 4s - 34ms/step - mean_absolute_error: 1561.7898 - mean_euclidean_distance: 2639.3923 - mean_squared_error: 9608778.0000 - r2_score: 0.9001 - rmse: 3099.8027 - loss: 142448864.0000 - val_loss: 912727.3125 - learning_rate: 0.0100
+Epoch 4/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 1287.3767 - mean_euclidean_distance: 2212.4641 - mean_squared_error: 4537243.5000 - r2_score: 0.9504 - rmse: 2130.0806 - loss: 7798876.0000 - val_loss: 706126.0625 - learning_rate: 0.0100
+Epoch 5/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 1306.5333 - mean_euclidean_distance: 2091.7236 - mean_squared_error: 3885998.5000 - r2_score: 0.9554 - rmse: 1971.2936 - loss: 535953.3125 - val_loss: 1518329.7500 - learning_rate: 0.0100
+Epoch 6/100
+132/132 - 3s - 20ms/step - mean_absolute_error: 3122.7761 - mean_euclidean_distance: 4504.3677 - mean_squared_error: 16235184.0000 - r2_score: 0.8674 - rmse: 4029.2908 - loss: 2787876.0000 - val_loss: 5315341.5000 - learning_rate: 0.0100
+Epoch 7/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 1663.6310 - mean_euclidean_distance: 2505.3982 - mean_squared_error: 5292841.0000 - r2_score: 0.9524 - rmse: 2300.6174 - loss: 2920339.0000 - val_loss: 3175373.7500 - learning_rate: 0.0100
+Epoch 8/100
+132/132 - 3s - 19ms/step - mean_absolute_error: 1299.1995 - mean_euclidean_distance: 2137.9883 - mean_squared_error: 5588947.5000 - r2_score: 0.9510 - rmse: 2364.0955 - loss: 450692.2188 - val_loss: 1433625.3750 - learning_rate: 0.0100
+Epoch 9/100
+
+Epoch 9: ReduceLROnPlateau reducing learning rate to 0.0009999999776482583.
+132/132 - 2s - 15ms/step - mean_absolute_error: 906.2946 - mean_euclidean_distance: 1437.1969 - mean_squared_error: 1569431.6250 - r2_score: 0.9875 - rmse: 1252.7695 - loss: 800312.0625 - val_loss: 1214409.3750 - learning_rate: 0.0100
+Epoch 10/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 628.2148 - mean_euclidean_distance: 1036.2433 - mean_squared_error: 824804.9375 - r2_score: 0.9930 - rmse: 908.1877 - loss: 463906.9688 - val_loss: 479765.9062 - learning_rate: 1.0000e-03
+Epoch 11/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 559.8674 - mean_euclidean_distance: 899.8624 - mean_squared_error: 516176.5625 - r2_score: 0.9953 - rmse: 718.4543 - loss: 381831.7188 - val_loss: 419181.7188 - learning_rate: 1.0000e-03
+Epoch 12/100
+132/132 - 2s - 14ms/step - mean_absolute_error: 535.6889 - mean_euclidean_distance: 848.5306 - mean_squared_error: 475644.0938 - r2_score: 0.9956 - rmse: 689.6696 - loss: 446571.3125 - val_loss: 446137.5938 - learning_rate: 1.0000e-03
+Epoch 13/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 552.3547 - mean_euclidean_distance: 846.6705 - mean_squared_error: 489241.3125 - r2_score: 0.9954 - rmse: 699.4579 - loss: 357191.8125 - val_loss: 574907.6875 - learning_rate: 1.0000e-03
+Epoch 14/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 519.2308 - mean_euclidean_distance: 813.5266 - mean_squared_error: 447369.6562 - r2_score: 0.9959 - rmse: 668.8569 - loss: 256297.6719 - val_loss: 481154.5625 - learning_rate: 1.0000e-03
+Epoch 15/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 539.1036 - mean_euclidean_distance: 827.1578 - mean_squared_error: 468259.8438 - r2_score: 0.9956 - rmse: 684.2951 - loss: 540709.8125 - val_loss: 566347.2500 - learning_rate: 1.0000e-03
+Epoch 16/100
+
+Epoch 16: ReduceLROnPlateau reducing learning rate to 9.999999310821295e-05.
+132/132 - 2s - 15ms/step - mean_absolute_error: 549.6193 - mean_euclidean_distance: 825.8834 - mean_squared_error: 468084.4688 - r2_score: 0.9957 - rmse: 684.1670 - loss: 204467.9844 - val_loss: 580394.8750 - learning_rate: 1.0000e-03
+Epoch 17/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 506.9235 - mean_euclidean_distance: 792.2296 - mean_squared_error: 425301.8438 - r2_score: 0.9960 - rmse: 652.1517 - loss: 168027.4375 - val_loss: 465958.8438 - learning_rate: 1.0000e-04
+Epoch 18/100
+132/132 - 2s - 18ms/step - mean_absolute_error: 506.3162 - mean_euclidean_distance: 796.0744 - mean_squared_error: 425949.0938 - r2_score: 0.9960 - rmse: 652.6478 - loss: 241493.1875 - val_loss: 453934.7188 - learning_rate: 1.0000e-04
+Epoch 19/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 512.7952 - mean_euclidean_distance: 792.1718 - mean_squared_error: 428882.5938 - r2_score: 0.9960 - rmse: 654.8913 - loss: 158403.7969 - val_loss: 496542.0938 - learning_rate: 1.0000e-04
+Epoch 20/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 502.0946 - mean_euclidean_distance: 789.2128 - mean_squared_error: 421328.9062 - r2_score: 0.9961 - rmse: 649.0985 - loss: 128015.0156 - val_loss: 436971.5938 - learning_rate: 1.0000e-04
+Epoch 21/100
+
+Epoch 21: ReduceLROnPlateau reducing learning rate to 9.999999019782991e-06.
+132/132 - 2s - 15ms/step - mean_absolute_error: 510.2112 - mean_euclidean_distance: 791.7997 - mean_squared_error: 426323.0938 - r2_score: 0.9960 - rmse: 652.9342 - loss: 256200.5312 - val_loss: 487369.8125 - learning_rate: 1.0000e-04
+Epoch 22/100
+132/132 - 2s - 17ms/step - mean_absolute_error: 506.5819 - mean_euclidean_distance: 789.8290 - mean_squared_error: 423727.9375 - r2_score: 0.9960 - rmse: 650.9438 - loss: 193847.8906 - val_loss: 472973.5938 - learning_rate: 1.0000e-05
+Epoch 23/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 506.7901 - mean_euclidean_distance: 789.9441 - mean_squared_error: 423728.5625 - r2_score: 0.9960 - rmse: 650.9443 - loss: 439817.3125 - val_loss: 473855.5625 - learning_rate: 1.0000e-05
+Epoch 24/100
+132/132 - 2s - 16ms/step - mean_absolute_error: 503.9991 - mean_euclidean_distance: 789.1310 - mean_squared_error: 421878.4375 - r2_score: 0.9960 - rmse: 649.5217 - loss: 198971.7812 - val_loss: 458370.5625 - learning_rate: 1.0000e-05
+Epoch 25/100
+132/132 - 2s - 15ms/step - mean_absolute_error: 504.5426 - mean_euclidean_distance: 789.3572 - mean_squared_error: 422093.4062 - r2_score: 0.9960 - rmse: 649.6871 - loss: 376375.5625 - val_loss: 461348.5938 - learning_rate: 1.0000e-05
+Epoch 26/100
+
+Epoch 26: ReduceLROnPlateau reducing learning rate to 1e-06.
+132/132 - 2s - 16ms/step - mean_absolute_error: 504.2865 - mean_euclidean_distance: 788.9852 - mean_squared_error: 421766.6875 - r2_score: 0.9960 - rmse: 649.4357 - loss: 614727.7500 - val_loss: 461191.9062 - learning_rate: 1.0000e-05
+Epoch 26: early stopping
+Restoring model weights from the end of the best epoch: 11.
+Evaluating on test dataset...
+29/29 - 33s - 1s/step - mean_absolute_error: 482.3239 - mean_euclidean_distance: 771.6728 - mean_squared_error: 407517.2188 - r2_score: 0.9957 - rmse: 638.3707 - loss: 613353.6250
+Test metrics: [<tf.Tensor: shape=(), dtype=float32, numpy=613353.625>, {'mean_absolute_error': <tf.Tensor: shape=(), dtype=float32, numpy=482.3238830566406>, 'mean_squared_error': <tf.Tensor: shape=(), dtype=float32, numpy=407517.21875>, 'rmse': <tf.Tensor: shape=(), dtype=float32, numpy=638.3707275390625>, 'r2_score': <tf.Tensor: shape=(), dtype=float32, numpy=0.995730996131897>, 'mean_euclidean_distance': <tf.Tensor: shape=(), dtype=float32, numpy=771.6727905273438>}]
+
+Sample predictions for test scenes:
+Node 0: True future_x=24726.0, future_y=-15327.0 | Predicted future_x=25109.4, future_y=-15365.7
+Node 1: True future_x=24937.0, future_y=-14679.0 | Predicted future_x=24462.7, future_y=-14378.1
+Node 2: True future_x=18531.0, future_y=-12320.0 | Predicted future_x=18319.6, future_y=-11657.6
+Node 3: True future_x=21114.0, future_y=-13432.0 | Predicted future_x=21439.5, future_y=-13252.9
+Node 4: True future_x=18334.0, future_y=-11610.0 | Predicted future_x=18878.2, future_y=-11364.8
+Running time: 1 hours, 13 minutes, 26 seconds

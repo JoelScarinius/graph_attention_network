@@ -144,6 +144,7 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
                 f"Node {i}: True future_x={targets[i, 0]:.1f}, future_y={targets[i, 1]:.1f} | "
                 f"Predicted future_x={predictions[i, 0]:.1f}, future_y={predictions[i, 1]:.1f}"
             )
+
         plt.figure(figsize=(8, 8))
         plt.scatter(targets[:20, 0], targets[:20, 1], label="True", c="g")
         plt.scatter(predictions[:20, 0], predictions[:20, 1], label="Pred", c="r", marker="x")
@@ -151,52 +152,63 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
         targets_np = targets[:20].numpy()
         predictions_np = predictions[:20].numpy()
 
-        x_min = int(np.floor(min(targets_np[:, 0].min(), predictions_np[:, 0].min())))
-        x_max = int(np.ceil(max(targets_np[:, 0].max(), predictions_np[:, 0].max())))
-        y_min = int(np.floor(min(targets_np[:, 1].min(), predictions_np[:, 1].min())))
-        y_max = int(np.ceil(max(targets_np[:, 1].max(), predictions_np[:, 1].max())))
+        x_min = int(np.floor(min(targets_np[:, 0].min(), predictions_np[:, 0].min()) / 500.0)) * 500
+        x_max = int(np.ceil(max(targets_np[:, 0].max(), predictions_np[:, 0].max()) / 500.0)) * 500
+        y_min = int(np.floor(min(targets_np[:, 1].min(), predictions_np[:, 1].min()) / 500.0)) * 500
+        y_max = int(np.ceil(max(targets_np[:, 1].max(), predictions_np[:, 1].max()) / 500.0)) * 500
 
         plt.xticks(np.arange(x_min, x_max + 1, 500), rotation=45)
         plt.yticks(np.arange(y_min, y_max + 1, 500))
         plt.xlabel("future_x")
         plt.ylabel("future_y")
         plt.title("True vs Predicted Future Positions")
-        if task == 2:
-            plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_scatter.png"))
-        else:
-            plt.savefig(os.path.join(plot_dir, f"task_{task}_scatter.png"))
+        plt.grid(True)
+        scatter_path = f"task_{task}_run_{run}_scatter.png" if task == 2 else f"task_{task}_scatter.png"
+        plt.savefig(os.path.join(plot_dir, scatter_path))
         plt.close()
 
-    med = history.history["mean_euclidean_distance"]
-    mse = history.history["mean_absolute_error"]
-    loss = history.history["loss"]
-    val_loss = history.history["val_loss"]
-    epochs_range = range(len(history.history["val_loss"]))
+    med = history.history.get("mean_euclidean_distance", [])
+    mae = history.history.get("mean_absolute_error", [])
+    loss = history.history.get("loss", [])
+    val_loss = history.history.get("val_loss", [])
+    epochs_range = range(len(loss))
 
-    plt.figure(figsize=(12, 6))
-    plt.subplot(1, 2, 1)
-    plt.plot(epochs_range, med, label="Mean Euclidean Distance")
-    plt.plot(epochs_range, mse, label="Mean Absolute Error")
-    plt.xlabel("Epoch")
-    plt.ylabel("Distance/Error")
-    plt.legend(loc="upper right")
-    plt.title("MED and MAE")
-    plt.yscale("log")
+    fig, axs = plt.subplots(3, 1, figsize=(12, 12), gridspec_kw={"height_ratios": [1, 1, 0.6]})
 
-    plt.subplot(1, 2, 2)
-    plt.plot(epochs_range, loss, label="Training Loss")
-    plt.plot(epochs_range, val_loss, label="Validation Loss")
-    plt.xlabel("Epoch")
-    plt.ylabel("Loss")
-    plt.legend(loc="upper right")
-    plt.title("Training and Validation Loss")
-    plt.yscale("log")
+    axs[0].plot(epochs_range, med, label="Mean Euclidean Distance")
+    axs[0].plot(epochs_range, mae, label="Mean Absolute Error")
+    axs[0].set_xlabel("Epoch")
+    axs[0].set_ylabel("Distance/Error")
+    axs[0].legend(loc="upper right")
+    axs[0].set_title("Mean Euclidean Distance and Mean Absolute Error")
+    axs[0].set_yscale("log")
+    axs[0].grid(True)
 
-    if task == 2:
-        plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_history.png"))
+    axs[1].plot(epochs_range, loss, label="Training Loss")
+    axs[1].plot(epochs_range, val_loss, label="Validation Loss")
+    axs[1].set_xlabel("Epoch")
+    axs[1].set_ylabel("Loss")
+    axs[1].legend(loc="upper right")
+    axs[1].set_title("Training and Validation Loss")
+    axs[1].set_yscale("log")
+    axs[1].grid(True)
+
+    if isinstance(results, list) and isinstance(results[-1], dict):
+        test_metrics = results[-1]
+    elif isinstance(results, dict):
+        test_metrics = results
     else:
-        plt.savefig(os.path.join(plot_dir, f"task_{task}_history.png"))
+        test_metrics = {}
 
+    cell_text = [[k.replace("_", " ").capitalize(), f"{v.numpy():,.4f}"] for k, v in test_metrics.items()]
+    table = axs[2].table(cellText=cell_text, colLabels=["Metric", "Value(mm)"], loc="center")
+    table.scale(1, 2)
+    axs[2].axis("off")
+    axs[2].set_title("Test Set Metrics", fontweight="bold")
+
+    plt.tight_layout()
+    history_path = f"task_{task}_run_{run}_history.png" if task == 2 else f"task_{task}_history.png"
+    plt.savefig(os.path.join(plot_dir, history_path))
     plt.close()
 
 
@@ -542,7 +554,7 @@ def main():
 
         elif task == 2:
             print("\nRunning Task 2...\n")
-            num_heads = [2, 4, 8, 16]
+            num_heads = [2, 4, 6, 8]
 
             for i, heads in enumerate(num_heads):
                 print(f"\nRun: {i + 1}\nHeads: {heads}\n")
