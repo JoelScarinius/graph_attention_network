@@ -2,9 +2,9 @@ import os
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+import matplotlib.pyplot as plt
 from tensorflow import keras
 from tensorflow.keras import layers
-import matplotlib.pyplot as plt
 import warnings
 import time
 
@@ -174,12 +174,11 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
     plt.subplot(1, 2, 1)
     plt.plot(epochs_range, med, label="Mean Euclidean Distance")
     plt.plot(epochs_range, mse, label="Mean Absolute Error")
-    plt.yticks(range(0, 6500, 500), minor=False)
-    plt.yticks(range(0, 6500, 100), minor=True)
     plt.xlabel("Epoch")
     plt.ylabel("Distance/Error")
     plt.legend(loc="upper right")
     plt.title("MED and MAE")
+    plt.yscale("log")
 
     plt.subplot(1, 2, 2)
     plt.plot(epochs_range, loss, label="Training Loss")
@@ -194,6 +193,9 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
     plt.close()
 
 
+# -------------------------
+# Define Model Components
+# -------------------------
 class GraphAttention(layers.Layer):
     def __init__(self, units, kernel_initializer="glorot_uniform", kernel_regularizer=None, **kwargs):
         super().__init__(**kwargs)
@@ -256,18 +258,26 @@ class CosineSimilarityGraphAttention(layers.Layer):
     def call(self, inputs):
         node_states, edges = inputs
         node_states_transformed = tf.matmul(node_states, self.kernel)
+
         target_states = tf.gather(node_states_transformed, edges[:, 0])
         source_states = tf.gather(node_states_transformed, edges[:, 1])
-        # Cosine similarity
-        dot_product = tf.reduce_sum(target_states * source_states, axis=-1)
-        target_norm = tf.norm(target_states, axis=-1)
-        source_norm = tf.norm(source_states, axis=-1)
-        cosine_sim = dot_product / (target_norm * source_norm + 1e-8)
-        # Normalize attention scores (softmax over incoming edges for each target node)
+
+        # Normalized vectors (safe cosine similarity)
+        normalized_target = tf.math.l2_normalize(target_states, axis=-1, epsilon=1e-8)
+        normalized_source = tf.math.l2_normalize(source_states, axis=-1, epsilon=1e-8)
+
+        cosine_sim = tf.reduce_sum(normalized_target * normalized_source, axis=-1)
+
+        # Stable softmax over incoming edges
         num_nodes = tf.shape(node_states)[0]
-        exp_sim = tf.exp(cosine_sim)
-        attention_sum = tf.math.unsorted_segment_sum(exp_sim, segment_ids=edges[:, 0], num_segments=num_nodes)
-        normalized_attention = exp_sim / tf.gather(attention_sum, edges[:, 0])
+        segment_max = tf.math.unsorted_segment_max(cosine_sim, edges[:, 0], num_nodes)
+        shifted_sim = cosine_sim - tf.gather(segment_max, edges[:, 0])
+        exp_sim = tf.exp(shifted_sim)
+
+        attention_sum = tf.math.unsorted_segment_sum(exp_sim, edges[:, 0], num_nodes)
+        normalized_attention = exp_sim / (tf.gather(attention_sum, edges[:, 0]) + 1e-8)
+
+        # Weighted sum of source node features
         node_states_neighbors = tf.gather(node_states_transformed, edges[:, 1])
         out = tf.math.unsorted_segment_sum(
             data=node_states_neighbors * normalized_attention[:, tf.newaxis],
@@ -314,16 +324,7 @@ class MultiHeadCosineGraphAttention(layers.Layer):
 class GraphAttentionNetwork(keras.Model):
     def __init__(self, hidden_units, num_heads, num_layers, output_dim, task, **kwargs):
         super().__init__(**kwargs)
-        if task == 2:
-            self.preprocess = keras.Sequential(
-                [
-                    layers.Dense(hidden_units * num_heads, activation="relu"),
-                    layers.Dense(hidden_units * num_heads, activation=None),
-                ]
-            )
-
-        else:
-            self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
+        self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
         self.attention_layers = [MultiHeadGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
@@ -369,23 +370,53 @@ class GraphAttentionNetwork(keras.Model):
 class CosineGraphAttentionNetwork(keras.Model):
     def __init__(self, hidden_units, num_heads, num_layers, output_dim, **kwargs):
         super().__init__(**kwargs)
+        # two‐layer preprocessing
         self.preprocess = keras.Sequential(
             [
                 layers.Dense(hidden_units * num_heads, activation="relu"),
                 layers.Dense(hidden_units * num_heads, activation=None),
             ]
         )
+        # multi‐head cosine‐similarity attention stacks
         self.attention_layers = [MultiHeadCosineGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
     def call(self, inputs, training=False):
+        # inputs is now guaranteed to be (node_features, edges)
         node_features, edges = inputs
         x = self.preprocess(node_features)
-        for attn_layer in self.attention_layers:
-            x_new = attn_layer([x, edges])
+        for attn in self.attention_layers:
+            x_new = attn([x, edges])
             x = x + x_new
-        outputs = self.output_layer(x)
-        return outputs
+        return self.output_layer(x)
+
+    def train_step(self, data):
+        # unpack the (features, edges, targets) triple
+        node_features, edges, targets = data
+        with tf.GradientTape() as tape:
+            outputs = self([node_features, edges], training=True)
+            loss = self.compiled_loss(targets, outputs)
+        grads = tape.gradient(loss, self.trainable_weights)
+        self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+        # update all metrics (including loss/MAE/RMSE/R2 etc)
+        self.compiled_metrics.update_state(targets, outputs)
+        # collect metric results
+        logs = {m.name: m.result() for m in self.metrics}
+        logs["loss"] = loss
+        return logs
+
+    def test_step(self, data):
+        node_features, edges, targets = data
+        outputs = self([node_features, edges], training=False)
+        loss = self.compiled_loss(targets, outputs)
+        self.compiled_metrics.update_state(targets, outputs)
+        logs = {m.name: m.result() for m in self.metrics}
+        logs["loss"] = loss
+        return logs
+
+    def predict_step(self, data):
+        node_features, edges, _ = data
+        return self([node_features, edges], training=False)
 
 
 def main(task=1):
@@ -393,85 +424,102 @@ def main(task=1):
     np.random.seed(2)
     tf.random.set_seed(2)
 
-    print("TensorFlow Version:", tf.__version__)
-    gpus = tf.config.list_physical_devices("GPU")
-    if gpus:
-        try:
-            tf.config.set_visible_devices(gpus[0], "GPU")
-            print("Using GPU:", gpus[0])
-        except RuntimeError as e:
-            print(e)
-    else:
-        print("No GPU detected. Training will run on CPU.")
-
     start_time = time.time()
 
     dataset_dir = "dataset"
 
-    feature_cols = ["current_x", "current_y", "previous_x", "previous_y"]
-    target_cols = ["future_x", "future_y"]
+    tasks = [1, 2, 3]
 
-    scenes = load_all_subgraphs(dataset_dir)
-    print(f"Loaded {len(scenes)} scenes.")
-    train_scenes, val_scenes, test_scenes = split_scenes(scenes, train_ratio=0.7, val_ratio=0.15)
-    print(f"Train scenes: {len(train_scenes)}, Val scenes: {len(val_scenes)}, Test scenes: {len(test_scenes)}")
+    for task in tasks:
 
-    train_dataset = tf.data.Dataset.from_generator(
-        lambda: scene_generator(train_scenes, feature_cols, target_cols),
-        output_signature=(
-            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-        ),
-    )
-    val_dataset = tf.data.Dataset.from_generator(
-        lambda: scene_generator(val_scenes, feature_cols, target_cols),
-        output_signature=(
-            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-        ),
-    )
-    test_dataset = tf.data.Dataset.from_generator(
-        lambda: scene_generator(test_scenes, feature_cols, target_cols),
-        output_signature=(
-            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-        ),
-    )
+        feature_cols = ["current_x", "current_y", "previous_x", "previous_y"]
+        target_cols = ["future_x", "future_y"]
 
-    train_dataset = train_dataset.shuffle(100).batch(1).map(squeeze_batch)
-    val_dataset = val_dataset.batch(1).map(squeeze_batch)
-    test_dataset = test_dataset.batch(1).map(squeeze_batch)
+        scenes = load_all_subgraphs(dataset_dir)
+        print(f"Loaded {len(scenes)} scenes.")
+        train_scenes, val_scenes, test_scenes = split_scenes(scenes, train_ratio=0.7, val_ratio=0.15)
+        print(f"Train scenes: {len(train_scenes)}, Val scenes: {len(val_scenes)}, Test scenes: {len(test_scenes)}")
 
-    gat_model = None
-    history = None
-
-    HIDDEN_UNITS = 100
-    NUM_HEADS = 8
-    NUM_LAYERS = 3
-    OUTPUT_DIM = 2
-    LEARNING_RATE = 1e-2
-    NUM_EPOCHS = 100
-
-    if task == 1:
-        print("\nRunning Task 1...\n")
-
-        gat_model = GraphAttentionNetwork(
-            hidden_units=HIDDEN_UNITS, num_heads=NUM_HEADS, num_layers=NUM_LAYERS, output_dim=OUTPUT_DIM, task=task
+        train_dataset = tf.data.Dataset.from_generator(
+            lambda: scene_generator(train_scenes, feature_cols, target_cols),
+            output_signature=(
+                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+            ),
+        )
+        val_dataset = tf.data.Dataset.from_generator(
+            lambda: scene_generator(val_scenes, feature_cols, target_cols),
+            output_signature=(
+                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+            ),
+        )
+        test_dataset = tf.data.Dataset.from_generator(
+            lambda: scene_generator(test_scenes, feature_cols, target_cols),
+            output_signature=(
+                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+            ),
         )
 
-    elif task == 2:
-        print("\nRunning Task 2...\n")
-        num_heads = [4, 8, 16]
+        train_dataset = train_dataset.shuffle(100).batch(1).map(squeeze_batch)
+        val_dataset = val_dataset.batch(1).map(squeeze_batch)
+        test_dataset = test_dataset.batch(1).map(squeeze_batch)
 
-        for i, heads in enumerate(num_heads):
+        HIDDEN_UNITS = 100
+        NUM_HEADS = 8
+        NUM_LAYERS = 3
+        OUTPUT_DIM = 2
+        LEARNING_RATE = 1e-2
+        NUM_EPOCHS = 100
+
+        gat_model = None
+        history = None
+
+        if task == 1:
+            print("\nRunning Task 1...\n")
 
             gat_model = GraphAttentionNetwork(
-                hidden_units=HIDDEN_UNITS, num_heads=heads, num_layers=NUM_LAYERS, output_dim=OUTPUT_DIM, task=task
+                hidden_units=HIDDEN_UNITS, num_heads=NUM_HEADS, num_layers=NUM_LAYERS, output_dim=OUTPUT_DIM, task=task
             )
 
+        elif task == 2:
+            print("\nRunning Task 2...\n")
+            num_heads = [4, 8, 16]
+
+            for i, heads in enumerate(num_heads):
+
+                gat_model = GraphAttentionNetwork(
+                    hidden_units=HIDDEN_UNITS, num_heads=heads, num_layers=NUM_LAYERS, output_dim=OUTPUT_DIM, task=task
+                )
+
+                gat_model, history = compile_and_train(
+                    gat_model=gat_model,
+                    train_dataset=train_dataset,
+                    val_dataset=val_dataset,
+                    epochs=NUM_EPOCHS,
+                    learning_rate=LEARNING_RATE,
+                )
+
+                evaluate_and_plot(gat_model=gat_model, history=history, test_dataset=test_dataset, task=task)
+
+        elif task == 3:
+            print("\nRunning Task 3...\n")
+
+            gat_model = CosineGraphAttentionNetwork(
+                hidden_units=HIDDEN_UNITS,
+                num_heads=NUM_HEADS,
+                num_layers=NUM_LAYERS,
+                output_dim=OUTPUT_DIM,
+            )
+
+        else:
+            raise ValueError("Unknown task")
+
+        if task != 2:
             gat_model, history = compile_and_train(
                 gat_model=gat_model,
                 train_dataset=train_dataset,
@@ -481,30 +529,6 @@ def main(task=1):
             )
 
             evaluate_and_plot(gat_model=gat_model, history=history, test_dataset=test_dataset, task=task)
-
-    elif task == 3:
-        print("\nRunning Task 3...\n")
-
-        gat_model = CosineGraphAttentionNetwork(
-            hidden_units=HIDDEN_UNITS,
-            num_heads=NUM_HEADS,
-            num_layers=NUM_LAYERS,
-            output_dim=OUTPUT_DIM,
-        )
-
-    else:
-        raise ValueError("Unknown task")
-
-    if task != 2:
-        gat_model, history = compile_and_train(
-            gat_model=gat_model,
-            train_dataset=train_dataset,
-            val_dataset=val_dataset,
-            epochs=NUM_EPOCHS,
-            learning_rate=LEARNING_RATE,
-        )
-
-        evaluate_and_plot(gat_model=gat_model, history=history, test_dataset=test_dataset, task=task)
 
     end_time = time.time()
     running_time = end_time - start_time
