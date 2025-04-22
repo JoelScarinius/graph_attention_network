@@ -9,7 +9,7 @@
 # force-stopped by the server. If you make the expected time too long, it will
 # take longer for the job to start. Here, we say the job will take 20 minutes
 #              d-hh:mm:ss
-#SBATCH --time=0-07:00:00
+#SBATCH --time=0-03:00:00
 # Define resources to use for the defined job. Resources, which are not defined
 # will not be provided.
 
