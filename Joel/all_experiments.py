@@ -144,6 +144,7 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run):
                 f"Node {i}: True future_x={targets[i, 0]:.1f}, future_y={targets[i, 1]:.1f} | "
                 f"Predicted future_x={predictions[i, 0]:.1f}, future_y={predictions[i, 1]:.1f}"
             )
+
         plt.figure(figsize=(8, 8))
         plt.scatter(targets[:20, 0], targets[:20, 1], label="True", c="g")
         plt.scatter(predictions[:20, 0], predictions[:20, 1], label="Pred", c="r", marker="x")
@@ -151,10 +152,10 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run):
         targets_np = targets[:20].numpy()
         predictions_np = predictions[:20].numpy()
 
-        x_min = int(np.floor(min(targets_np[:, 0].min(), predictions_np[:, 0].min())))
-        x_max = int(np.ceil(max(targets_np[:, 0].max(), predictions_np[:, 0].max())))
-        y_min = int(np.floor(min(targets_np[:, 1].min(), predictions_np[:, 1].min())))
-        y_max = int(np.ceil(max(targets_np[:, 1].max(), predictions_np[:, 1].max())))
+        x_min = int(np.floor(min(targets_np[:, 0].min(), predictions_np[:, 0].min()) / 500.0)) * 500
+        x_max = int(np.ceil(max(targets_np[:, 0].max(), predictions_np[:, 0].max()) / 500.0)) * 500
+        y_min = int(np.floor(min(targets_np[:, 1].min(), predictions_np[:, 1].min()) / 500.0)) * 500
+        y_max = int(np.ceil(max(targets_np[:, 1].max(), predictions_np[:, 1].max()) / 500.0)) * 500
 
         plt.xticks(np.arange(x_min, x_max + 1, 500), rotation=45)
         plt.yticks(np.arange(y_min, y_max + 1, 500))
@@ -167,11 +168,11 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run):
             plt.savefig(os.path.join(plot_dir, f"task_{task}_scatter.png"))
         plt.close()
 
-    med = history.history["mean_euclidean_distance"]
-    mse = history.history["mean_absolute_error"]
-    loss = history.history["loss"]
-    val_loss = history.history["val_loss"]
-    epochs_range = range(len(history.history["val_loss"]))
+    med = history.history.get("mean_euclidean_distance", [])
+    mae = history.history.get("mean_absolute_error", [])
+    loss = history.history.get("loss", [])
+    val_loss = history.history.get("val_loss", [])
+    epochs_range = range(len(loss))
 
     plt.figure(figsize=(12, 6))
     plt.subplot(1, 2, 1)
@@ -225,13 +226,17 @@ class GraphAttention(layers.Layer):
             regularizer=self.kernel_regularizer,
             name="kernel_attention",
         )
-        super().build(input_shape)
+        self.built = True
 
     def call(self, inputs):
         node_states, edges = inputs
 
         # Linearly transform node states
+
+        # Linearly transform node states
         node_states_transformed = tf.matmul(node_states, self.kernel)
+
+        # (1) Compute pair-wise attention scores
 
         # (1) Compute pair-wise attention scores
         target_states = tf.gather(node_states_transformed, edges[:, 0])
@@ -241,10 +246,14 @@ class GraphAttention(layers.Layer):
         attention_scores = tf.squeeze(attention_scores, axis=-1)
 
         # (2) Normalize attention scores
+
+        # (2) Normalize attention scores
         attention_scores = tf.exp(tf.clip_by_value(attention_scores, -2, 2))
         num_nodes = tf.shape(node_states)[0]
         attention_sum = tf.math.unsorted_segment_sum(attention_scores, segment_ids=edges[:, 0], num_segments=num_nodes)
         normalized_attention = attention_scores / tf.gather(attention_sum, edges[:, 0])
+
+        # (3) Gather node states of neighbors, apply attention scores and aggregate
 
         # (3) Gather node states of neighbors, apply attention scores and aggregate
         node_states_neighbors = tf.gather(node_states_transformed, edges[:, 1])
@@ -272,6 +281,8 @@ class CosineSimilarityGraphAttention(layers.Layer):
 
     def call(self, inputs):
         node_states, edges = inputs
+
+        # Linearly transform node states
 
         # Linearly transform node states
         node_states_transformed = tf.matmul(node_states, self.kernel)
@@ -315,11 +326,18 @@ class MultiHeadGraphAttention(layers.Layer):
         node_features, edges = inputs
 
         # Obtain outputs from each attention head
+
+        # Obtain outputs from each attention head
         outputs = [attn([node_features, edges]) for attn in self.attention_layers]
+        # Concatenate or average the node states from each head
         # Concatenate or average the node states from each head
         if self.merge_type == "concat":
             outputs = tf.concat(outputs, axis=-1)
+            outputs = tf.concat(outputs, axis=-1)
         else:
+            outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
+        # Activate and return node states
+        return tf.nn.relu(outputs)
             outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
         # Activate and return node states
         return tf.nn.relu(outputs)
@@ -338,9 +356,17 @@ class MultiHeadCosineGraphAttention(layers.Layer):
         # Obtain outputs from each attention head
         outputs = [attention_layer([node_features, edges]) for attention_layer in self.attention_layers]
         # Concatenate or average the node states from each head
+
+        # Obtain outputs from each attention head
+        outputs = [attention_layer([node_features, edges]) for attention_layer in self.attention_layers]
+        # Concatenate or average the node states from each head
         if self.merge_type == "concat":
             outputs = tf.concat(outputs, axis=-1)
+            outputs = tf.concat(outputs, axis=-1)
         else:
+            outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
+        # Activate and return node states
+        return tf.nn.relu(outputs)
             outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
         # Activate and return node states
         return tf.nn.relu(outputs)
@@ -359,9 +385,24 @@ class GraphAttentionNetwork(keras.Model):
             )
         else:
             self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
+        if task == 2:
+            self.preprocess = keras.Sequential(
+                [
+                    layers.Dense(hidden_units * num_heads, activation="relu"),
+                    layers.Dense(hidden_units * num_heads, activation="relu"),
+                    layers.Dense(hidden_units * num_heads, activation=None),
+                ]
+            )
+        else:
+            self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
         self.attention_layers = [MultiHeadGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
+    def call(self, inputs):
+        node_states, edges = inputs
+        x = self.preprocess(node_states)
+        for attention_layer in self.attention_layers:
+            x = attention_layer([x, edges]) + x
     def call(self, inputs):
         node_states, edges = inputs
         x = self.preprocess(node_states)
@@ -373,24 +414,32 @@ class GraphAttentionNetwork(keras.Model):
     def train_step(self, data):
         node_features, edges, targets = data
 
+
         with tf.GradientTape() as tape:
+            # Forward pass
             # Forward pass
             outputs = self([node_features, edges], training=True)
             # Compute loss
+            # Compute loss
             loss = self.compiled_loss(targets, outputs)
+        # Compute gradients
         # Compute gradients
         grads = tape.gradient(loss, self.trainable_weights)
         # Apply gradients (update wights)
+        # Apply gradients (update wights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+        # Update metric(s)
         # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
 
+
         return logs
 
     def predict_step(self, data):
         node_features, edges, _ = data
+        # Forward pass
         # Forward pass
         outputs = self([node_features, edges], training=False)
         return outputs
@@ -398,13 +447,17 @@ class GraphAttentionNetwork(keras.Model):
     def test_step(self, data):
         node_features, edges, targets = data
         # Forward pass
+        # Forward pass
         outputs = self([node_features, edges], training=False)
         # Compute loss
+        # Compute loss
         loss = self.compiled_loss(targets, outputs)
+        # Update metric(s)
         # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
 
         return logs
 
@@ -413,12 +466,18 @@ class CosineGraphAttentionNetwork(keras.Model):
     def __init__(self, hidden_units, num_heads, num_layers, output_dim, **kwargs):
         super().__init__(**kwargs)
         self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
+        self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
         self.attention_layers = [MultiHeadCosineGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
     def call(self, inputs):
+    def call(self, inputs):
         node_features, edges = inputs
         x = self.preprocess(node_features)
+        for attention_layer in self.attention_layers:
+            x = attention_layer([x, edges]) + x
+        outputs = self.output_layer(x)
+        return outputs
         for attention_layer in self.attention_layers:
             x = attention_layer([x, edges]) + x
         outputs = self.output_layer(x)
@@ -428,30 +487,40 @@ class CosineGraphAttentionNetwork(keras.Model):
         node_features, edges, targets = data
         with tf.GradientTape() as tape:
             # Forward pass
+            # Forward pass
             outputs = self([node_features, edges], training=True)
+            # Compute loss
             # Compute loss
             loss = self.compiled_loss(targets, outputs)
         # Compute gradients
+        # Compute gradients
         grads = tape.gradient(loss, self.trainable_weights)
         # Apply gradients (update weights)
+        # Apply gradients (update weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+        # Update metric(s)
         # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
 
         return logs
 
     def test_step(self, data):
         node_features, edges, targets = data
         # Forward pass
+        # Forward pass
         outputs = self([node_features, edges], training=False)
         # Compute loss
+        # Compute loss
         loss = self.compiled_loss(targets, outputs)
+        # Update metric(s)
         # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
 
         return logs
 
@@ -460,6 +529,7 @@ class CosineGraphAttentionNetwork(keras.Model):
         return self([node_features, edges], training=False)
 
 
+def main():
 def main():
     warnings.filterwarnings("ignore")
     np.random.seed(2)
@@ -478,60 +548,73 @@ def main():
     else:
         print("No GPU detected. Training will run on CPU.")
 
+    print("TensorFlow Version:", tf.__version__)
+    print("Num GPUs Available:", len(tf.config.list_physical_devices("GPU")))
+    gpus = tf.config.list_physical_devices("GPU")
+    if gpus:
+        try:
+            tf.config.set_visible_devices(gpus[0], "GPU")
+            print("Using GPU:", gpus[0])
+
+        except RuntimeError as e:
+            print(e)
+    else:
+        print("No GPU detected. Training will run on CPU.")
+
     start_time = time.time()
 
     dataset_dir = "dataset"
 
+    feature_cols = ["current_x", "current_y", "previous_x", "previous_y"]
+    target_cols = ["future_x", "future_y"]
+
+    scenes = load_all_subgraphs(dataset_dir)
+    print(f"Loaded {len(scenes)} scenes.")
+    train_scenes, val_scenes, test_scenes = split_scenes(scenes, train_ratio=0.7, val_ratio=0.15)
+    print(f"Train scenes: {len(train_scenes)}, Val scenes: {len(val_scenes)}, Test scenes: {len(test_scenes)}")
+
+    train_dataset = tf.data.Dataset.from_generator(
+        lambda: scene_generator(train_scenes, feature_cols, target_cols),
+        output_signature=(
+            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+        ),
+    )
+    val_dataset = tf.data.Dataset.from_generator(
+        lambda: scene_generator(val_scenes, feature_cols, target_cols),
+        output_signature=(
+            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+        ),
+    )
+    test_dataset = tf.data.Dataset.from_generator(
+        lambda: scene_generator(test_scenes, feature_cols, target_cols),
+        output_signature=(
+            tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
+            tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
+            tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
+        ),
+    )
+
+    train_dataset = train_dataset.shuffle(100).batch(1).map(squeeze_batch)
+    val_dataset = val_dataset.batch(1).map(squeeze_batch)
+    test_dataset = test_dataset.batch(1).map(squeeze_batch)
+
+    HIDDEN_UNITS = 100
+    NUM_HEADS = 8
+    NUM_LAYERS = 3
+    OUTPUT_DIM = 2
+    LEARNING_RATE = 1e-2
+    NUM_EPOCHS = 100
+
+    gat_model = None
+    history = None
+
     tasks = [1, 2, 3]
 
     for task in tasks:
-
-        feature_cols = ["current_x", "current_y", "previous_x", "previous_y"]
-        target_cols = ["future_x", "future_y"]
-
-        scenes = load_all_subgraphs(dataset_dir)
-        print(f"Loaded {len(scenes)} scenes.")
-        train_scenes, val_scenes, test_scenes = split_scenes(scenes, train_ratio=0.7, val_ratio=0.15)
-        print(f"Train scenes: {len(train_scenes)}, Val scenes: {len(val_scenes)}, Test scenes: {len(test_scenes)}")
-
-        train_dataset = tf.data.Dataset.from_generator(
-            lambda: scene_generator(train_scenes, feature_cols, target_cols),
-            output_signature=(
-                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-            ),
-        )
-        val_dataset = tf.data.Dataset.from_generator(
-            lambda: scene_generator(val_scenes, feature_cols, target_cols),
-            output_signature=(
-                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-            ),
-        )
-        test_dataset = tf.data.Dataset.from_generator(
-            lambda: scene_generator(test_scenes, feature_cols, target_cols),
-            output_signature=(
-                tf.TensorSpec(shape=(None, len(feature_cols)), dtype=tf.float32),
-                tf.TensorSpec(shape=(None, 2), dtype=tf.int32),
-                tf.TensorSpec(shape=(None, len(target_cols)), dtype=tf.float32),
-            ),
-        )
-
-        train_dataset = train_dataset.shuffle(100).batch(1).map(squeeze_batch)
-        val_dataset = val_dataset.batch(1).map(squeeze_batch)
-        test_dataset = test_dataset.batch(1).map(squeeze_batch)
-
-        HIDDEN_UNITS = 100
-        NUM_HEADS = 8
-        NUM_LAYERS = 3
-        OUTPUT_DIM = 2
-        LEARNING_RATE = 1e-2
-        NUM_EPOCHS = 100
-
-        gat_model = None
-        history = None
 
         if task == 1:
             print("\nRunning Task 1...\n")
@@ -542,9 +625,10 @@ def main():
 
         elif task == 2:
             print("\nRunning Task 2...\n")
-            num_heads = [4, 8, 16]
+            num_heads = [2, 4, 6, 8]
 
             for i, heads in enumerate(num_heads):
+                print(f"\nRun: {i + 1}\nHeads: {heads}\n")
                 print(f"\nRun: {i + 1}\nHeads: {heads}\n")
 
                 gat_model = GraphAttentionNetwork(
@@ -562,9 +646,13 @@ def main():
                 evaluate_and_plot(
                     gat_model=gat_model, history=history, test_dataset=test_dataset, task=task, run=str(i + 1)
                 )
+                evaluate_and_plot(
+                    gat_model=gat_model, history=history, test_dataset=test_dataset, task=task, run=str(i + 1)
+                )
 
         elif task == 3:
             print("\nRunning Task 3...\n")
+            NUM_HEADS = 8
 
             gat_model = CosineGraphAttentionNetwork(
                 hidden_units=HIDDEN_UNITS,
@@ -596,4 +684,5 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
     main()

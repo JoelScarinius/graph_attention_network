@@ -1,0 +1,1128 @@
+now processing task id:: 2884 on worker1.slurm.hj.se
+2025-04-22 10:30:03.223834: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1745317803.246501 1803480 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1745317803.252669 1803480 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1745317803.269202 1803480 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745317803.269244 1803480 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745317803.269250 1803480 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1745317803.269254 1803480 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-04-22 10:30:03.273812: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1745317806.064842 1803480 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 8098 MB memory:  -> device: 0, name: NVIDIA A100 80GB PCIe MIG 1g.10gb, pci bus id: 0000:81:00.0, compute capability: 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1745317817.199211 1804122 service.cc:152] XLA service 0x7f01b00060f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1745317817.199311 1804122 service.cc:160]   StreamExecutor device (0): NVIDIA A100 80GB PCIe MIG 1g.10gb, Compute Capability 8.0
+2025-04-22 10:30:17.672580: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+I0000 00:00:1745317818.746785 1804122 cuda_dnn.cc:529] Loaded cuDNN version 90300
+2025-04-22 10:30:21.933747: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:30:22.470814: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:30:22.484790: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:30:22.593636: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:30:22.818073: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:30:22.864328: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4024 bytes spill stores, 4064 bytes spill loads
+
+I0000 00:00:1745317826.852066 1804122 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+2025-04-22 10:30:31.972614: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:30:32.042072: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:30:32.071309: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:30:32.071389: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4040 bytes spill stores, 4076 bytes spill loads
+
+2025-04-22 10:30:32.132538: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:30:32.341183: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:31:06.610608: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:31:06.659867: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:06.729557: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:06.794278: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:31:06.932157: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:31:06.991103: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4012 bytes spill stores, 4048 bytes spill loads
+
+2025-04-22 10:31:15.333572: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:31:15.883941: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:15.907612: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:15.938604: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:15.995288: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3784 bytes spill stores, 3820 bytes spill loads
+
+2025-04-22 10:31:16.447758: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:31:16.492070: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:31:23.845509: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:24.614506: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:24.961203: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:31:24.996767: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:31:25.066392: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3812 bytes spill stores, 3852 bytes spill loads
+
+2025-04-22 10:31:25.098136: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:31:49.019384: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:49.958927: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:31:49.975215: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:31:49.981381: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:31:50.231058: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:31:50.242608: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3932 bytes spill stores, 3968 bytes spill loads
+
+2025-04-22 10:32:42.117872: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:32:42.164175: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:32:42.219763: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:32:42.356006: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:32:42.389202: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:32:42.528587: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3908 bytes spill stores, 3940 bytes spill loads
+
+2025-04-22 10:33:27.611181: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:33:27.786541: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:33:27.848854: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:33:28.178006: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4092 bytes spill stores, 4132 bytes spill loads
+
+2025-04-22 10:33:28.224786: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:33:28.278745: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:33:53.275666: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:33:53.523988: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:33:53.560161: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:33:53.655637: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3952 bytes spill stores, 3988 bytes spill loads
+
+2025-04-22 10:33:53.659166: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:33:53.816010: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:33:53.978642: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:35:18.586360: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:35:19.140439: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:35:19.201709: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 10:35:19.305283: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:35:19.334631: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4444 bytes spill stores, 4360 bytes spill loads
+
+2025-04-22 10:35:19.346433: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3660 bytes spill stores, 3696 bytes spill loads
+
+2025-04-22 10:35:19.608881: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4412 bytes spill stores, 4464 bytes spill loads
+
+2025-04-22 10:37:16.376045: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-04-22 10:37:16.376614: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:37:16.376653: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:37:16.376671: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:37:16.376720: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:37:54.951042: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:37:54.951359: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:37:54.951388: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:37:54.951427: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:37:56.727762: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:37:57.151486: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:37:58.374996: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:37:58.773957: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:37:58.774036: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:37:58.774067: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:37:59.980266: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:00.357582: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:38:00.357698: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:00.357720: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:00.357759: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:01.489459: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:01.867533: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:01.867615: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:01.867652: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:03.246966: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:03.633150: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:03.633219: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:03.633258: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:04.992932: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:05.377099: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:05.377157: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:05.377194: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:06.718971: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:07.118976: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:38:08.142275: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:08.494671: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:08.494761: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:08.494794: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:09.695234: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:09.695321: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:09.695354: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:11.279578: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:11.279669: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:11.279736: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:13.022260: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:13.022349: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:13.022388: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:14.544170: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:14.891611: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:14.891697: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:14.891725: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:38:16.233737: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:17.793042: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:18.115068: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:18.115168: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:19.330803: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:19.739672: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2025-04-22 10:38:22.596030: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:24.344233: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:24.734447: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:24.734552: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:38:25.923788: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:38:53.181662: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:38:53.281481: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:38:53.533684: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:38:53.645107: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:00.746259: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:39:00.790329: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:39:00.941276: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:39:00.981354: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:08.307025: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:39:08.391076: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:39:08.537954: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:08.650366: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:39:29.367464: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:39:29.567606: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:39:29.632567: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:29.694519: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:39:37.105587: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:39:37.137802: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:37.180892: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:39:37.339861: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:39:47.346137: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:39:47.365844: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:39:47.408697: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:39:47.417486: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:40:21.417252: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:40:21.417673: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:40:21.455540: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:40:21.585578: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:40:49.617498: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_19', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:40:49.798108: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:40:49.855694: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_2715', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:40:49.904528: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:40:50.003378: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:40:50.051977: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:41:09.962818: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:41:10.590105: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:41:10.700142: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:41:10.957116: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:41:52.634534: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3908 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:41:52.673164: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 3956 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:41:52.674073: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_827', 4056 bytes spill stores, 4032 bytes spill loads
+
+2025-04-22 10:41:52.685410: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_18', 3964 bytes spill stores, 3892 bytes spill loads
+
+2025-04-22 10:42:35.942848: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:42:35.942941: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:42:35.942983: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:02.409180: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:02.409269: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:02.409300: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:03.468022: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:03.468102: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:03.468142: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:03.853671: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:03.853749: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:03.853777: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:04.883075: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:04.883161: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:04.883190: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:05.237316: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:05.237387: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:05.237419: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:06.187108: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:06.187198: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:06.187233: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:06.537968: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:06.538040: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:06.538072: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:07.486518: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:07.486605: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:07.486642: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:07.838686: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:07.838741: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:07.838773: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:08.841518: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:08.841606: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:08.841637: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:09.937003: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:09.937088: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:09.937123: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:10.295461: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:10.295548: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:11.287508: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:11.287592: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:11.287622: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:11.633952: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:11.634027: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:11.634059: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:12.604150: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:12.962889: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:12.962963: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:12.962991: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:13.835279: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:13.835363: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:13.835426: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:14.146692: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:14.146770: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:14.146800: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:15.078745: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:16.407418: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-04-22 10:43:16.407516: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:16.407535: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:16.407562: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:16.755030: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:17.736580: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:17.736666: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:17.736701: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:18.075920: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:18.076017: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:18.834300: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:18.834386: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:18.834416: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:19.190008: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:19.190083: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:19.190118: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:20.106373: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:20.472955: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:20.473014: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:20.473048: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:21.439824: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:21.439915: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:21.439979: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:21.775069: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:21.775124: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:21.775159: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:22.736615: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:22.736701: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:22.736737: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:23.094112: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:23.094171: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:23.094205: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:35.788090: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:43:35.788172: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:43:35.788208: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:43:46.583018: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:43:47.874719: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:48.484267: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:48.974036: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:48.984752: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:43:48.999132: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:49.094105: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:43:49.125010: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:43:49.192299: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:43:49.222761: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:43:56.151767: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:58.118415: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:58.132913: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:43:58.252188: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:58.292282: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:43:58.328153: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:43:58.460409: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:43:58.461662: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:43:58.508740: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:43:58.586289: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:44:06.569171: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:06.879553: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:06.914100: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:07.184754: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:07.711663: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:07.792486: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:07.835920: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:07.990057: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:44:08.009654: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:44:08.010811: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:15.717900: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:16.005131: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_41', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:16.394455: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:16.602018: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:16.609192: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:16.619477: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:44:16.634670: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:16.668878: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:16.726946: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:16.768456: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_4773', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:17.033182: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:17.118006: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:44:29.337097: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:30.985050: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:31.019580: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:31.068105: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:44:31.130219: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:31.162043: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:44:31.275879: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:44:31.361949: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:31.363674: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:44:31.416119: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:44:59.775511: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:45:00.400557: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:45:00.533010: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:45:00.540821: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:45:00.558471: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:45:00.580431: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:45:00.584971: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:45:00.791320: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:45:00.839886: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:45:00.978312: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:46:24.231605: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:25.902061: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:46:25.927632: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:46:25.947143: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:25.950561: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:25.979496: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:26.195510: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:46:26.213024: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:46:26.269455: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:46:26.369913: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:46:54.377637: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:46:54.477898: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_41', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:54.477961: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_4773', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:54.774134: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:54.835850: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:54.849337: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:46:54.870373: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:54.878248: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:46:54.885643: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:46:55.007305: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:46:55.202811: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:46:55.213503: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:47:12.306598: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:12.389255: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:12.415477: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:12.444298: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:47:12.512249: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:47:12.543869: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:12.733243: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:47:12.751955: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:47:12.791711: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:47:12.910070: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:47:58.193475: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:59.216984: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:59.342824: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:59.387890: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:47:59.398041: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 68 bytes spill stores, 68 bytes spill loads
+
+2025-04-22 10:47:59.398106: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4492 bytes spill stores, 4428 bytes spill loads
+
+2025-04-22 10:47:59.404786: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4492 bytes spill stores, 4432 bytes spill loads
+
+2025-04-22 10:47:59.522079: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:47:59.592352: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_38', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:47:59.643422: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1409', 4456 bytes spill stores, 4524 bytes spill loads
+
+2025-04-22 10:50:08.117468: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:08.117575: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:50:08.117624: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:50:54.176230: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:57.573382: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:57.927108: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:57.927175: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:50:57.927189: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:50:59.159168: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:59.504150: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:50:59.504250: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:50:59.504291: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:01.150490: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:01.150588: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:01.150657: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:02.734010: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:04.599444: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:04.970616: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:04.970731: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:04.970772: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:06.441936: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:08.324169: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:10.194221: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:10.194350: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:10.194404: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:11.901507: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:12.305982: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:12.306067: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:12.306098: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:13.986510: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:13.990459: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:13.990486: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:15.287015: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:17.158796: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:17.158872: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:18.378263: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:20.042111: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:20.467642: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:20.467721: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:20.467778: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:51:21.898432: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:22.267229: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:22.267313: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:43.455962: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 10:51:43.456196: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 10:51:43.456335: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 10:52:01.184142: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:01.220359: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:01.270767: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:52:01.452249: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:52:01.520995: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:52:01.557211: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:52:01.675284: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3908 bytes spill stores, 3948 bytes spill loads
+
+2025-04-22 10:52:01.708206: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4040 bytes spill stores, 4080 bytes spill loads
+
+2025-04-22 10:52:12.514383: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:14.467839: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:14.857602: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4076 bytes spill stores, 4116 bytes spill loads
+
+2025-04-22 10:52:14.904237: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:52:15.030616: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3908 bytes spill stores, 3948 bytes spill loads
+
+2025-04-22 10:52:15.046125: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:52:15.072842: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:52:15.107915: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:52:27.693682: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_63', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:52:27.994769: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3676 bytes spill stores, 3712 bytes spill loads
+
+2025-04-22 10:52:28.040635: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:52:28.057407: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_6993', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:52:28.181925: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:52:28.301539: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:28.303589: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:28.335767: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:52:28.392899: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3668 bytes spill stores, 3708 bytes spill loads
+
+2025-04-22 10:52:28.597855: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:52:40.468256: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_6831', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:52:41.018577: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:41.040854: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:41.050120: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_63', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:52:41.094756: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:52:41.230931: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3772 bytes spill stores, 3808 bytes spill loads
+
+2025-04-22 10:52:41.306598: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:52:41.488384: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:52:41.489681: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3720 bytes spill stores, 3760 bytes spill loads
+
+2025-04-22 10:52:41.490337: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:52:54.011762: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:54.193895: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:52:54.237753: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:52:54.262525: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:52:54.306861: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:52:54.364970: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:52:54.487546: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3868 bytes spill stores, 3908 bytes spill loads
+
+2025-04-22 10:52:54.569424: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4004 bytes spill stores, 4044 bytes spill loads
+
+2025-04-22 10:53:27.046847: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4024 bytes spill stores, 4060 bytes spill loads
+
+2025-04-22 10:53:28.771160: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:53:29.087043: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:53:29.182365: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:53:29.374609: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:53:29.514932: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:53:29.649769: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:53:29.789136: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3884 bytes spill stores, 3924 bytes spill loads
+
+2025-04-22 10:53:48.393903: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3808 bytes spill stores, 3852 bytes spill loads
+
+2025-04-22 10:53:49.169312: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:53:49.731383: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:53:49.759746: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:53:49.801001: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:53:49.811307: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3904 bytes spill stores, 3944 bytes spill loads
+
+2025-04-22 10:53:49.835132: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:53:49.931822: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:54:30.666187: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:54:31.716387: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:54:31.725906: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:54:31.829915: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:54:31.960658: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:54:32.003669: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:54:32.131534: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3952 bytes spill stores, 3988 bytes spill loads
+
+2025-04-22 10:54:32.224975: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3840 bytes spill stores, 3884 bytes spill loads
+
+2025-04-22 10:55:32.668047: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:55:32.882625: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:55:32.897559: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:55:32.937225: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_63', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:55:33.068623: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:55:33.241907: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3848 bytes spill stores, 3884 bytes spill loads
+
+2025-04-22 10:55:33.289001: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_6831', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 10:55:33.539039: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 10:55:33.639436: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:55:33.797107: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3976 bytes spill stores, 4012 bytes spill loads
+
+2025-04-22 10:57:17.266868: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4216 bytes spill stores, 4144 bytes spill loads
+
+2025-04-22 10:57:17.974842: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 3780 bytes spill stores, 3824 bytes spill loads
+
+2025-04-22 10:57:18.038409: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 3848 bytes spill stores, 3888 bytes spill loads
+
+2025-04-22 10:57:18.057747: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:57:18.069487: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4220 bytes spill stores, 4156 bytes spill loads
+
+2025-04-22 10:57:18.123037: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 80 bytes spill stores, 80 bytes spill loads
+
+2025-04-22 10:57:18.254688: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_1991', 4360 bytes spill stores, 4308 bytes spill loads
+
+2025-04-22 10:57:18.314571: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 4088 bytes spill stores, 4084 bytes spill loads
+
+2025-04-22 11:03:57.426087: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:03:57.426256: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:03:59.641179: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:03:59.641245: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:03:59.641268: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:01.664191: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:01.664345: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:01.664367: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:03.571130: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:06.069780: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:06.070592: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:06.070792: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:08.169050: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-04-22 11:04:08.169153: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:08.169166: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:08.169190: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:09.774834: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:09.774951: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:12.264468: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:16.114484: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:16.114589: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:16.114635: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:16.604884: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:16.604963: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:16.604986: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:18.915376: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:18.915603: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:18.915628: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:20.709739: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:25.465066: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:25.465156: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:25.465173: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:27.582026: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:27.582124: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:27.582157: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:29.742354: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:29.742506: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:29.742544: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:30.161840: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:30.161928: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:30.161955: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:31.838219: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:31.838281: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:31.838296: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:32.376743: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:32.376897: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:32.377049: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:34.971527: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:34.971616: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:34.971651: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:36.885487: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:36.885627: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:36.885695: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:37.301539: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:37.301617: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:37.301638: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:39.634790: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:39.634885: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:39.634919: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:41.885246: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:41.885339: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:41.885381: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:43.770220: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:43.770401: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:43.770739: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:04:44.204389: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:44.204468: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:50.400972: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:52.471468: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:54.585899: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:56.756390: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:04:56.757364: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:04:56.757450: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:05:26.954911: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:05:26.954998: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:05:50.373865: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:05:50.902731: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:05:51.000259: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:05:51.270412: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:05:51.330856: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:05:51.428371: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3924 bytes spill stores, 3964 bytes spill loads
+
+2025-04-22 11:06:04.187257: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:04.359276: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:04.403601: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:06:04.764755: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:06:04.798866: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:06:04.839856: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3888 bytes spill stores, 3928 bytes spill loads
+
+2025-04-22 11:06:29.388510: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:06:29.415836: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:29.561884: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:29.693342: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:06:29.779792: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:06:30.043386: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3888 bytes spill stores, 3928 bytes spill loads
+
+2025-04-22 11:06:43.620372: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:43.860878: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:43.869913: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:06:43.935960: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:06:44.259083: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:06:44.276220: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:06:44.318074: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3720 bytes spill stores, 3760 bytes spill loads
+
+2025-04-22 11:07:17.596146: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:17.613041: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:17.690106: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:17.728716: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:07:18.051226: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:07:18.112623: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3676 bytes spill stores, 3716 bytes spill loads
+
+2025-04-22 11:07:18.139663: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:07:29.470777: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:29.923412: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:29.946982: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:07:30.131636: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:07:30.307503: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:07:30.344802: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3796 bytes spill stores, 3840 bytes spill loads
+
+2025-04-22 11:07:52.392580: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:52.504021: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:07:52.672468: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:07:52.964142: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:07:52.972227: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:07:53.037507: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3848 bytes spill stores, 3884 bytes spill loads
+
+2025-04-22 11:09:19.086170: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:09:19.181744: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:09:19.186052: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:09:19.444673: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:09:19.517432: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3800 bytes spill stores, 3844 bytes spill loads
+
+2025-04-22 11:09:19.547513: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:10:03.490781: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_85', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:10:03.768445: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:10:03.951094: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:10:03.966929: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:10:04.418363: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:10:04.432901: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:10:04.648308: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3824 bytes spill stores, 3860 bytes spill loads
+
+2025-04-22 11:10:50.515902: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 88 bytes spill stores, 88 bytes spill loads
+
+2025-04-22 11:10:50.524788: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:10:50.587072: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4 bytes spill stores, 4 bytes spill loads
+
+2025-04-22 11:10:50.944879: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4376 bytes spill stores, 4324 bytes spill loads
+
+2025-04-22 11:10:51.028623: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 3744 bytes spill stores, 3784 bytes spill loads
+
+2025-04-22 11:10:51.029557: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_78', 4408 bytes spill stores, 4460 bytes spill loads
+
+2025-04-22 11:20:11.413571: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:11.413929: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:11.414004: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:20:19.192188: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:27.098408: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:27.099047: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:34.797144: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:34.797290: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:37.009612: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:37.009696: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:37.009736: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:20:39.619194: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:41.190699: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:42.700343: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:46.587797: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:46.587889: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:48.418363: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:53.793740: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:53.793877: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:53.793926: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:20:56.173053: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:56.173164: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:56.173193: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:20:58.729408: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:20:58.729474: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:20:58.729500: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:05.604680: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:05.604755: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:05.604775: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:07.902857: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:07.903038: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:11.843462: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:11.843535: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:11.843569: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:14.235767: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:14.235941: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:14.236013: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:19.451126: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:19.451207: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:19.451248: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:23.976718: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:26.222798: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:26.222915: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:26.222967: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:26.729397: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:33.717940: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:33.718028: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:33.718097: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:21:38.906819: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:21:38.906946: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:21:38.906984: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:22:08.489442: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:22:08.489556: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:22:08.489604: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:40:41.893373: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:40:41.893470: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:40:41.893514: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:09.773805: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2025-04-22 11:42:12.629473: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:12.629560: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:12.629594: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:16.904937: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:16.904999: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:16.905015: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:17.290297: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:17.290381: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:17.290405: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:19.809585: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:19.809672: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:19.809698: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:21.806909: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:21.807478: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:21.807557: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:23.929783: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:23.929865: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:23.929885: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:26.010513: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:26.010726: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:26.010991: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:27.831422: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:27.831500: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:27.831526: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:31.948962: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:31.949059: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:36.043014: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:36.043114: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:36.043157: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:38.212901: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:38.213062: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:38.213163: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:44.648051: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:44.648154: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:44.648183: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:46.691700: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:48.908741: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:48.908821: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:48.908858: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:53.165017: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:53.165090: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:53.165115: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:54.811897: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+2025-04-22 11:42:54.812003: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 6165794397088342307
+2025-04-22 11:42:54.812086: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17056541147512415123
+2025-04-22 11:42:57.297262: I tensorflow/core/framework/local_rendezvous.cc:426] Local rendezvous recv item cancelled. Key hash: 17968486205942298813
+finished task with id:: 2884
