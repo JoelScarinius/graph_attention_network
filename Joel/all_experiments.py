@@ -128,7 +128,7 @@ def compile_and_train(gat_model, train_dataset, val_dataset, epochs, learning_ra
     return gat_model, history
 
 
-def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
+def evaluate_and_plot(gat_model, history, test_dataset, task, run):
     plot_dir = "plots"
     os.makedirs(plot_dir, exist_ok=True)
 
@@ -161,7 +161,10 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
         plt.xlabel("future_x")
         plt.ylabel("future_y")
         plt.title("True vs Predicted Future Positions")
-        plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_scatter.png"))
+        if task == 2:
+            plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_scatter.png"))
+        else:
+            plt.savefig(os.path.join(plot_dir, f"task_{task}_scatter.png"))
         plt.close()
 
     med = history.history["mean_euclidean_distance"]
@@ -189,7 +192,11 @@ def evaluate_and_plot(gat_model, history, test_dataset, task, run="1"):
     plt.title("Training and Validation Loss")
     plt.yscale("log")
 
-    plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_history.png"))
+    if task == 2:
+        plt.savefig(os.path.join(plot_dir, f"task_{task}_run_{run}_history.png"))
+    else:
+        plt.savefig(os.path.join(plot_dir, f"task_{task}_history.png"))
+
     plt.close()
 
 
@@ -222,16 +229,24 @@ class GraphAttention(layers.Layer):
 
     def call(self, inputs):
         node_states, edges = inputs
+
+        # Linearly transform node states
         node_states_transformed = tf.matmul(node_states, self.kernel)
+
+        # (1) Compute pair-wise attention scores
         target_states = tf.gather(node_states_transformed, edges[:, 0])
         source_states = tf.gather(node_states_transformed, edges[:, 1])
         concat_features = tf.concat([target_states, source_states], axis=-1)
         attention_scores = tf.nn.leaky_relu(tf.matmul(concat_features, self.kernel_attention))
         attention_scores = tf.squeeze(attention_scores, axis=-1)
+
+        # (2) Normalize attention scores
         attention_scores = tf.exp(tf.clip_by_value(attention_scores, -2, 2))
         num_nodes = tf.shape(node_states)[0]
         attention_sum = tf.math.unsorted_segment_sum(attention_scores, segment_ids=edges[:, 0], num_segments=num_nodes)
         normalized_attention = attention_scores / tf.gather(attention_sum, edges[:, 0])
+
+        # (3) Gather node states of neighbors, apply attention scores and aggregate
         node_states_neighbors = tf.gather(node_states_transformed, edges[:, 1])
         out = tf.math.unsorted_segment_sum(
             data=node_states_neighbors * normalized_attention[:, tf.newaxis],
@@ -257,6 +272,8 @@ class CosineSimilarityGraphAttention(layers.Layer):
 
     def call(self, inputs):
         node_states, edges = inputs
+
+        # Linearly transform node states
         node_states_transformed = tf.matmul(node_states, self.kernel)
 
         target_states = tf.gather(node_states_transformed, edges[:, 0])
@@ -296,12 +313,16 @@ class MultiHeadGraphAttention(layers.Layer):
 
     def call(self, inputs):
         node_features, edges = inputs
+
+        # Obtain outputs from each attention head
         outputs = [attn([node_features, edges]) for attn in self.attention_layers]
+        # Concatenate or average the node states from each head
         if self.merge_type == "concat":
-            out = tf.concat(outputs, axis=-1)
+            outputs = tf.concat(outputs, axis=-1)
         else:
-            out = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
-        return tf.nn.relu(out)
+            outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
+        # Activate and return node states
+        return tf.nn.relu(outputs)
 
 
 class MultiHeadCosineGraphAttention(layers.Layer):
@@ -313,105 +334,125 @@ class MultiHeadCosineGraphAttention(layers.Layer):
 
     def call(self, inputs):
         node_features, edges = inputs
-        outputs = [attn([node_features, edges]) for attn in self.attention_layers]
+
+        # Obtain outputs from each attention head
+        outputs = [attention_layer([node_features, edges]) for attention_layer in self.attention_layers]
+        # Concatenate or average the node states from each head
         if self.merge_type == "concat":
-            out = tf.concat(outputs, axis=-1)
+            outputs = tf.concat(outputs, axis=-1)
         else:
-            out = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
-        return tf.nn.relu(out)
+            outputs = tf.reduce_mean(tf.stack(outputs, axis=-1), axis=-1)
+        # Activate and return node states
+        return tf.nn.relu(outputs)
 
 
 class GraphAttentionNetwork(keras.Model):
     def __init__(self, hidden_units, num_heads, num_layers, output_dim, task, **kwargs):
         super().__init__(**kwargs)
-        self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
+        if task == 2:
+            self.preprocess = keras.Sequential(
+                [
+                    layers.Dense(hidden_units * num_heads, activation="relu"),
+                    layers.Dense(hidden_units * num_heads, activation="relu"),
+                    layers.Dense(hidden_units * num_heads, activation=None),
+                ]
+            )
+        else:
+            self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
         self.attention_layers = [MultiHeadGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
-    def call(self, inputs, training=False):
-        # Since our dataset is unbatched, node_features is expected to have shape [n_nodes, feature_dim]
-        node_features, edges = inputs
-
-        # Directly use inputs since no batch dimension is present.
-        x = self.preprocess(node_features)
-        for attn_layer in self.attention_layers:
-            x_new = attn_layer([x, edges])
-            x = x + x_new  # residual connection
+    def call(self, inputs):
+        node_states, edges = inputs
+        x = self.preprocess(node_states)
+        for attention_layer in self.attention_layers:
+            x = attention_layer([x, edges]) + x
         outputs = self.output_layer(x)
         return outputs
 
     def train_step(self, data):
         node_features, edges, targets = data
+
         with tf.GradientTape() as tape:
+            # Forward pass
             outputs = self([node_features, edges], training=True)
+            # Compute loss
             loss = self.compiled_loss(targets, outputs)
+        # Compute gradients
         grads = tape.gradient(loss, self.trainable_weights)
+        # Apply gradients (update wights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
+        # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
         return logs
 
     def predict_step(self, data):
         node_features, edges, _ = data
+        # Forward pass
         outputs = self([node_features, edges], training=False)
         return outputs
 
     def test_step(self, data):
         node_features, edges, targets = data
+        # Forward pass
         outputs = self([node_features, edges], training=False)
+        # Compute loss
         loss = self.compiled_loss(targets, outputs)
+        # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
         return logs
 
 
 class CosineGraphAttentionNetwork(keras.Model):
     def __init__(self, hidden_units, num_heads, num_layers, output_dim, **kwargs):
         super().__init__(**kwargs)
-        # two‐layer preprocessing
-        self.preprocess = keras.Sequential(
-            [
-                layers.Dense(hidden_units * num_heads, activation="relu"),
-                layers.Dense(hidden_units * num_heads, activation=None),
-            ]
-        )
-        # multi‐head cosine‐similarity attention stacks
+        self.preprocess = layers.Dense(hidden_units * num_heads, activation="relu")
         self.attention_layers = [MultiHeadCosineGraphAttention(hidden_units, num_heads) for _ in range(num_layers)]
         self.output_layer = layers.Dense(output_dim)
 
-    def call(self, inputs, training=False):
-        # inputs is now guaranteed to be (node_features, edges)
+    def call(self, inputs):
         node_features, edges = inputs
         x = self.preprocess(node_features)
-        for attn in self.attention_layers:
-            x_new = attn([x, edges])
-            x = x + x_new
-        return self.output_layer(x)
+        for attention_layer in self.attention_layers:
+            x = attention_layer([x, edges]) + x
+        outputs = self.output_layer(x)
+        return outputs
 
     def train_step(self, data):
-        # unpack the (features, edges, targets) triple
         node_features, edges, targets = data
         with tf.GradientTape() as tape:
+            # Forward pass
             outputs = self([node_features, edges], training=True)
+            # Compute loss
             loss = self.compiled_loss(targets, outputs)
+        # Compute gradients
         grads = tape.gradient(loss, self.trainable_weights)
+        # Apply gradients (update weights)
         self.optimizer.apply_gradients(zip(grads, self.trainable_weights))
-        # update all metrics (including loss/MAE/RMSE/R2 etc)
+        # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
-        # collect metric results
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
         return logs
 
     def test_step(self, data):
         node_features, edges, targets = data
+        # Forward pass
         outputs = self([node_features, edges], training=False)
+        # Compute loss
         loss = self.compiled_loss(targets, outputs)
+        # Update metric(s)
         self.compiled_metrics.update_state(targets, outputs)
         logs = {m.name: m.result() for m in self.metrics}
         logs["loss"] = loss
+
         return logs
 
     def predict_step(self, data):
@@ -419,10 +460,23 @@ class CosineGraphAttentionNetwork(keras.Model):
         return self([node_features, edges], training=False)
 
 
-def main(task=1):
+def main():
     warnings.filterwarnings("ignore")
     np.random.seed(2)
     tf.random.set_seed(2)
+
+    print("TensorFlow Version:", tf.__version__)
+    print("Num GPUs Available:", len(tf.config.list_physical_devices("GPU")))
+    gpus = tf.config.list_physical_devices("GPU")
+    if gpus:
+        try:
+            tf.config.set_visible_devices(gpus[0], "GPU")
+            print("Using GPU:", gpus[0])
+
+        except RuntimeError as e:
+            print(e)
+    else:
+        print("No GPU detected. Training will run on CPU.")
 
     start_time = time.time()
 
@@ -491,6 +545,7 @@ def main(task=1):
             num_heads = [4, 8, 16]
 
             for i, heads in enumerate(num_heads):
+                print(f"\nRun: {i + 1}\nHeads: {heads}\n")
 
                 gat_model = GraphAttentionNetwork(
                     hidden_units=HIDDEN_UNITS, num_heads=heads, num_layers=NUM_LAYERS, output_dim=OUTPUT_DIM, task=task
@@ -504,7 +559,9 @@ def main(task=1):
                     learning_rate=LEARNING_RATE,
                 )
 
-                evaluate_and_plot(gat_model=gat_model, history=history, test_dataset=test_dataset, task=task)
+                evaluate_and_plot(
+                    gat_model=gat_model, history=history, test_dataset=test_dataset, task=task, run=str(i + 1)
+                )
 
         elif task == 3:
             print("\nRunning Task 3...\n")
@@ -539,11 +596,4 @@ def main(task=1):
 
 
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--task", type=int, default=1, help="Task number: 1 (basic), 2 (deep embedding), 3 (cosine attention)"
-    )
-    args = parser.parse_args()
-    main(task=args.task)
+    main()
